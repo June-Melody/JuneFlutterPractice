@@ -10,8 +10,6 @@ readyForRunAppStart() async {
 
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-
-  // await readyObserver();
 }
 
 readyForMaterialAppStart() async {
