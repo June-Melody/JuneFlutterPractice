@@ -23,7 +23,7 @@ flutter run
 Here's a list of managed templates assembled according to your preferences.
 | Name | Description | Maintainer |
 | --- | --- | --- |
-| [**junelee_pattern.log_flutter**](https://github.com/melodysdreamj/junelee-pattern.lego-flutter) | The Junelee Flutter Pattern is an architecture that incorporates a lot of effort to develop and release an app in one shot, featuring five key Lego pieces and various other Legos |
+| [**junelee_pattern.lego_flutter**](https://github.com/melodysdreamj/junelee-pattern.lego-flutter) | The Junelee Flutter Pattern is an architecture that incorporates a lot of effort to develop and release an app in one shot, featuring five key Lego pieces and various other Legos |
 
 
 <br/>
