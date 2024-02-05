@@ -23,7 +23,7 @@ flutter run
 Here's a list of managed templates assembled according to your preferences.
 | Name | Description | Maintainer |
 | --- | --- | --- |
-| [**logger.log_flutter**](https://github.com/melodysdreamj/logger.lego-flutter) | Logger is one of the famous log packages in the Flutter community. When you use this package, the location of the logo printed in the console window comes out to the depth you set, making it very easy to use for debugging and more. In this Lego, we've wrapped logger one more time to make it even easier to use. |
+| [**junelee.pattern.log_flutter**](https://github.com/melodysdreamj/junelee.pattern.lego-flutter) | The Junelee Flutter Pattern is an architecture that incorporates a lot of effort to develop and release an app in one shot, featuring five key Lego pieces and various other Legos |
 
 
 <br/>
