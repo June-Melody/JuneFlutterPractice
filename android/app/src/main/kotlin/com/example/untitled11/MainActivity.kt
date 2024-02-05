@@ -1,4 +1,4 @@
-package com.example.untitled11
+package flutter.lego.architecture
 
 import io.flutter.embedding.android.FlutterActivity
 
