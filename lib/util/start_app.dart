@@ -6,9 +6,9 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../main.dart';
-import '../app/_/_/interaction/view/_/_/init_view.dart';
 import 'config/screen_rotate.dart';
 import 'config/theme/_config.dart';
+import 'init_view.dart';
 import 'ready/ready.dart';
 
 export 'config/theme/_config.dart';
