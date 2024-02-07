@@ -1,30 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
 
-import '../../../util/start_app.dart';
+import '../../util/start_app.dart';
 
 _button00(BuildContext context) async {
-  Iterable<Future> futures = [];
-  var result = await Future.wait(futures);
-  print(result);
+  // re start app
+  Phoenix.rebirth(context);
 }
 
-_button01(BuildContext context) async {
-  Iterable<Future<int>> futures = [];
-  var result = await Future.wait(futures);
-  print(result);
-}
+_button01(BuildContext context) async {}
 
-_button02(BuildContext context) async {
-  Iterable<Future<String>> futures = [];
-  var result = await Future.wait(futures);
-  print(result);
-}
+_button02(BuildContext context) async {}
 
-_button03(BuildContext context) async {
-  Iterable<Future<dynamic>> futures = [];
-  var result = await Future.wait(futures);
-  print(result);
-}
+_button03(BuildContext context) async {}
 
 _button04(BuildContext context) async {}
 

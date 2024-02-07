@@ -1,31 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:phone_numbers_parser/phone_numbers_parser.dart';
 
-import '../../../util/start_app.dart';
+import '../../util/start_app.dart';
 
 _button00(BuildContext context) async {
-  // start block touch
-  context.loaderOverlay.show(
-    widgetBuilder: (progress) {
-      return Container();
-    },
-  );
+  // verify phone number
+  String phoneNumber = "1234567890";
+  String countryCode = "US";
+  bool result = PhoneNumber.parse(phoneNumber,
+          callerCountry: isoCodeConversionMap[countryCode])
+      .isValid(type: PhoneNumberType.mobile);
+  print(result);
 }
 
 _button01(BuildContext context) async {
-  // stop block touch
-  context.loaderOverlay.hide();
+  // get international code
+  String phoneNumber = "1234567890";
+  String countryCode = "US";
+  String result = PhoneNumber.parse(phoneNumber,
+          callerCountry: isoCodeConversionMap[countryCode])
+      .international;
+  print(result);
 }
 
-_button02(BuildContext context) async {
-  // example of start block touch and after 3 seconds stop block touch
-  context.loaderOverlay.show(
-    widgetBuilder: (progress) {
-      return Container();
-    },
-  );
-  await Future.delayed(Duration(seconds: 3));
-  context.loaderOverlay.hide();
-}
+_button02(BuildContext context) async {}
 
 _button03(BuildContext context) async {}
 

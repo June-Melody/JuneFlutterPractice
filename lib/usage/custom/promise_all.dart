@@ -1,93 +1,34 @@
-import 'package:country_codes/country_codes.dart';
 import 'package:flutter/material.dart';
 
-import '../../../util/start_app.dart';
+import '../../util/start_app.dart';
 
-/*
-  String getDialCode() {
-    final CountryDetails details = CountryCodes.detailsForLocale();
-    return details.dialCode ?? "+1";
-  }
-
-  String getCountryCode() {
-    final CountryDetails details = CountryCodes.detailsForLocale();
-    final Locale? deviceLocale = CountryCodes.getDeviceLocale();
-    return details.alpha2Code ??
-        deviceLocale?.countryCode ??
-        details.alpha3Code ??
-        "US";
-  }
-
-  String getAlpha2CountryCode() {
-    final CountryDetails details = CountryCodes.detailsForLocale();
-    return details.alpha2Code ?? "US";
-  }
-
-  // String getCountryCode() {
-  //   final Locale? deviceLocale = CountryCodes.getDeviceLocale();
-  //   return deviceLocale?.countryCode ?? "US";
-  // }
-
-  String getAlpha3CountryCode() {
-    final CountryDetails details = CountryCodes.detailsForLocale();
-    return details.alpha3Code ?? "US";
-  }
-
-  String getCountryName() {
-    final CountryDetails details = CountryCodes.detailsForLocale();
-    return details.name ?? "US";
-  }
-
-  String getCountryLocalizedName() {
-    final CountryDetails details = CountryCodes.detailsForLocale();
-    return details.localizedName ?? "US";
-  }
- */
 _button00(BuildContext context) async {
-  // get dial code
-  final CountryDetails details = CountryCodes.detailsForLocale();
-  final String dialCode = details.dialCode ?? "+1";
-  log(dialCode);
+  Iterable<Future> futures = [];
+  var result = await Future.wait(futures);
+  print(result);
 }
 
 _button01(BuildContext context) async {
-  // get country code
-  final CountryDetails details = CountryCodes.detailsForLocale();
-  final Locale? deviceLocale = CountryCodes.getDeviceLocale();
-  final String countryCode = details.alpha2Code ??
-      deviceLocale?.countryCode ??
-      details.alpha3Code ??
-      "US";
-  log(countryCode);
+  Iterable<Future<int>> futures = [];
+  var result = await Future.wait(futures);
+  print(result);
 }
 
 _button02(BuildContext context) async {
-  // get alpha2 country code
-  final CountryDetails details = CountryCodes.detailsForLocale();
-  final String alpha2CountryCode = details.alpha2Code ?? "US";
-  log(alpha2CountryCode);
+  Iterable<Future<String>> futures = [];
+  var result = await Future.wait(futures);
+  print(result);
 }
 
 _button03(BuildContext context) async {
-  // get alpha3 country code
-  final CountryDetails details = CountryCodes.detailsForLocale();
-  final String alpha3CountryCode = details.alpha3Code ?? "US";
-  log(alpha3CountryCode);
+  Iterable<Future<dynamic>> futures = [];
+  var result = await Future.wait(futures);
+  print(result);
 }
 
-_button04(BuildContext context) async {
-  // get country name
-  final CountryDetails details = CountryCodes.detailsForLocale();
-  final String countryName = details.name ?? "US";
-  log(countryName);
-}
+_button04(BuildContext context) async {}
 
-_button05(BuildContext context) async {
-  // get country localized name
-  final CountryDetails details = CountryCodes.detailsForLocale();
-  final String countryLocalizedName = details.localizedName ?? "US";
-  log(countryLocalizedName);
-}
+_button05(BuildContext context) async {}
 
 _button06(BuildContext context) async {}
 

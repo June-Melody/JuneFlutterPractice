@@ -1,82 +1,158 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
-import '../../../util/start_app.dart';
+import '../../util/start_app.dart';
 
-/*
-  setLight() {
-    Get.changeTheme(ThemeConfig.appTheme);
-  }
-
-  setDark() {
-    Get.changeTheme(ThemeConfig.appDarkTheme);
-  }
-
-  bool isDarkMode() {
-    return Get.isDarkMode;
-  }
-
-  switchTheme() {
-    log("Get.isDarkMode:${Get.isDarkMode}");
-    Get.changeTheme(
-        Get.isDarkMode ? ThemeConfig.appTheme : ThemeConfig.appDarkTheme);
-  }
-
-  deleteAllInstance() {
-    Get.deleteAll(force: true);
-  }
- */
 _button00(BuildContext context) async {
-  // set light
-  Get.changeTheme(ThemeConfig.appTheme);
+  // map to string
+  Map<String, Object?> map = {};
+  String result = json.encode(map);
+  log(result);
 }
 
 _button01(BuildContext context) async {
-  // set dark
-  Get.changeTheme(ThemeConfig.appDarkTheme);
+  // string to map
+  String string = "hello world";
+  Map<String, Object?> map = json.decode(string);
+  log(map);
 }
 
 _button02(BuildContext context) async {
-  // is dark mode
-  Get.isDarkMode;
+  // list to string
+  List<String> list = ["hello", "world"];
+  String result = jsonEncode(list);
 }
 
 _button03(BuildContext context) async {
-  // switch theme
-  log("Get.isDarkMode:${Get.isDarkMode}");
-  Get.changeTheme(
-      Get.isDarkMode ? ThemeConfig.appTheme : ThemeConfig.appDarkTheme);
+  // string to list
+  String string = "['hello', 'world']";
+  List<String> list = jsonDecode(string);
+  log(list);
 }
 
 _button04(BuildContext context) async {
-  // delete all instance
-  Get.deleteAll(force: true);
+  // string to single quotes list
+  String string = "['hello', 'world']";
+  String doubleQuotes = jsonEncode(string);
+  String result = doubleQuotes.replaceAll('"', "'");
 }
 
-_button05(BuildContext context) async {}
+_button05(BuildContext context) async {
+  // string to list for js
+  String string = "['hello', 'world']";
+  string = string.replaceAll('[', '');
+  string = string.replaceAll(']', '');
+  string = string.replaceAll('"', '');
+  string = string.replaceAll('\'', '');
+}
 
-_button06(BuildContext context) async {}
+_button06(BuildContext context) async {
+  // string check for js
+  String string = "['hello', 'world']";
+  string = string.replaceAll('[', '');
+  string = string.replaceAll(']', '');
+  string = string.replaceAll('"', '\'');
+}
 
-_button07(BuildContext context) async {}
+_button07(BuildContext context) async {
+  // string to uint8list
+  String string = "hello world";
+  var encoded = utf8.encode(string);
+  final Uint8List unit8List = Uint8List.fromList(encoded);
+}
 
-_button08(BuildContext context) async {}
+_button08(BuildContext context) async {
+  // uint8list to string
+  Uint8List uint8list = Uint8List(10);
+  String result = utf8.decode(uint8list);
+}
 
-_button09(BuildContext context) async {}
+_button09(BuildContext context) async {
+  // file to uint8list
+  File file = File("path");
+  if (!await file.exists()) {
+    return null;
+  } else {
+    return await file.readAsBytes();
+  }
+}
 
-_button10(BuildContext context) async {}
+_button10(BuildContext context) async {
+  // string to list
+  String string = "['hello', 'world']";
+  List<String> list = (jsonDecode(string) as List<dynamic>).cast<String>();
+}
 
-_button11(BuildContext context) async {}
+_button11(BuildContext context) async {
+  // string to double
+  String string = "3.14";
+  double? result = double.tryParse(string);
+}
 
-_button12(BuildContext context) async {}
+_button12(BuildContext context) async {
+  // string to int
+  String string = "3";
+  int? result = int.tryParse(string);
+}
 
-_button13(BuildContext context) async {}
+_button13(BuildContext context) async {
+  // double to string
+  double number = 3.14;
+  String? result = number.toString();
+}
 
-_button14(BuildContext context) async {}
+_button14(BuildContext context) async {
+  // int to string
+  int number = 3;
+  String? result = number.toString();
+}
 
-_button15(BuildContext context) async {}
+_button15(BuildContext context) async {
+  // string to tag
+  String input = "hello,world";
+  List<String> list = input.split(',');
+  for (var element in list) {
+    if (element.contains(" ")) {
+      return null;
+    }
+    if (element == "") {
+      return null;
+    }
+  }
+  return list;
+}
 
-_button16(BuildContext context) async {}
+_button16(BuildContext context) async {
+  // string to tag
+  String input = "hello,world";
+  List<String> list = input.split(',');
+  for (var element in list) {
+    if (element.contains(" ")) {
+      return null;
+    }
+    if (element == "") {
+      return null;
+    }
+  }
+  return list;
+}
 
-_button17(BuildContext context) async {}
+_button17(BuildContext context) async {
+  // string to tag
+  String input = "hello,world";
+  List<String> list = input.split(',');
+  for (var element in list) {
+    if (element.contains(" ")) {
+      return null;
+    }
+    if (element == "") {
+      return null;
+    }
+  }
+  return list;
+}
 
 _button18(BuildContext context) async {}
 

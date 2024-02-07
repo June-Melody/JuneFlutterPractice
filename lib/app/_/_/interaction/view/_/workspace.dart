@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:easy_localization/easy_localization.dart';
 
+import '../../../../../../util/handler/admob/anchored_adaptive_banner_ads.dart';
+import '../../../../../../util/handler/admob/inline_size_adaptive_banner.dart';
+import '../../../../../../util/handler/admob/my_ad_mob_params_class.dart';
 import '../../../../../../util/start_app.dart';
 
 class WorkSpacePage {
@@ -21,6 +24,11 @@ class WorkSpacePage {
                     .center(),
                 Gap(20),
                 _button(context, "New Button", () {}),
+                InlineSizeAdaptiveBanner(
+                  width: 1.sw,
+                  maxHeight: 300,
+                  noBackgroundColor: false,
+                ),
               ],
             ),
           ),

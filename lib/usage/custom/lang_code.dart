@@ -1,141 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_image_compress/flutter_image_compress.dart';
+import 'package:intl/intl.dart';
 
-import '../../../util/start_app.dart';
+import '../../util/start_app.dart';
 
 _button00(BuildContext context) async {
-  // compress asset image to bytes
-  var byte = await FlutterImageCompress.compressAssetImage(
-    'assets/image.jpg',
-    minHeight: 1920,
-    minWidth: 1080,
-    quality: 70,
-    rotate: 0,
-    autoCorrectionAngle: true,
-    format: CompressFormat.jpeg,
-    keepExif: false,
-  );
-  log(byte?.length);
+  // get language code by system
+  String languageCode = Intl.getCurrentLocale().substring(0, 2);
 }
 
 _button01(BuildContext context) async {
-  // compress bytes image to bytes
-  var byte = await FlutterImageCompress.compressWithList(
-    Uint8List(0),
-    minHeight: 1920,
-    minWidth: 1080,
-    quality: 70,
-    rotate: 0,
-    inSampleSize: 1,
-    autoCorrectionAngle: true,
-    format: CompressFormat.jpeg,
-    keepExif: false,
-  );
-  log(byte?.length);
+  // get language code by app
+  String languageCode = Localizations.localeOf(context).languageCode;
 }
 
-_button02(BuildContext context) async {
-  // compress file image to bytes
-  var byte = await FlutterImageCompress.compressWithFile(
-    'path',
-    minHeight: 1920,
-    minWidth: 1080,
-    quality: 70,
-    rotate: 0,
-    inSampleSize: 1,
-    autoCorrectionAngle: true,
-    format: CompressFormat.jpeg,
-    keepExif: false,
-    numberOfRetries: 5,
-  );
-  log(byte?.length);
-}
+_button02(BuildContext context) async {}
 
-_button03(BuildContext context) async {
-  // compress file path image to bytes
-  var byte = await FlutterImageCompress.compressWithFile(
-    'path',
-    minHeight: 1920,
-    minWidth: 1080,
-    quality: 70,
-    rotate: 0,
-    inSampleSize: 1,
-    autoCorrectionAngle: true,
-    format: CompressFormat.jpeg,
-    keepExif: false,
-    numberOfRetries: 5,
-  );
-  log(byte?.length);
-}
+_button03(BuildContext context) async {}
 
-_button04(BuildContext context) async {
-  // compress file image to file
-  var byte = await FlutterImageCompress.compressAndGetFile(
-    'path',
-    'targetPath',
-    minHeight: 1920,
-    minWidth: 1080,
-    quality: 70,
-    rotate: 0,
-    inSampleSize: 1,
-    autoCorrectionAngle: true,
-    format: CompressFormat.jpeg,
-    keepExif: false,
-    numberOfRetries: 5,
-  );
-  log(byte?.path);
-  
-}
+_button04(BuildContext context) async {}
 
-_button05(BuildContext context) async {
-  // compress file string image to file
-  var byte = await FlutterImageCompress.compressAndGetFile(
-    'path',
-    'targetPath',
-    minHeight: 1920,
-    minWidth: 1080,
-    quality: 70,
-    rotate: 0,
-    inSampleSize: 1,
-    autoCorrectionAngle: true,
-    format: CompressFormat.jpeg,
-    keepExif: false,
-    numberOfRetries: 5,
-  );
-  log(byte?.path);
-}
+_button05(BuildContext context) async {}
 
-/*
-  String _sampleFileName = "hello2.jpeg";
-  String _targetAssetsPath = Assets.image.share.path;
-
-  Uint8List? list = await FlutterImageCompressKit().compressAssetImageToBytes(
-    _targetAssetsPath,
-    minHeight: 150, //1920,
-    minWidth: 150, //1080,
-    quality: 40,
-    rotate: 0,
-  );
-
-  log("original size:${(await rootBundle.load(_targetAssetsPath)).lengthInBytes}");
-  log("compressed size:${list?.lengthInBytes}");
- */
-_button06(BuildContext context) async {
-  // example
-  String _sampleFileName = "hello2.jpeg";
-  String _targetAssetsPath = "assets/image/share.jpg";
-
-  Uint8List? list = await FlutterImageCompress.compressAssetImage(
-    _targetAssetsPath,
-    minHeight: 150, //1920,
-    minWidth: 150, //1080,
-    quality: 40,
-    rotate: 0,
-  );
-
-  log("original size:${(await rootBundle.load(_targetAssetsPath)).lengthInBytes}");
-  log("compressed size:${list?.lengthInBytes}");
-}
+_button06(BuildContext context) async {}
 
 _button07(BuildContext context) async {}
 

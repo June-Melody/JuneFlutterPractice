@@ -1,22 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 
-import '../../../util/start_app.dart';
-import 'package:junes_flutter_architecture/junes_flutter_architecture.dart';
+import '../../util/start_app.dart';
 
 _button00(BuildContext context) async {
-  var cropFilePath = await InstaAssetsPickerKit()
-      .getCropPathSinglePhoto(context, "제목", Colors.blue);
-  log(cropFilePath);
+  bool isInternet = await InternetConnectionChecker().hasConnection;
+  print(isInternet);
 }
 
-_button01(BuildContext context) async {
-  var cropStream =
-  await InstaAssetsPickerKit().getSinglePhoto(context, '제목', Colors.blue);
-  var cropFilePath = await InstaAssetsPickerKit()
-      .getAllSelectedAssetsAndCroppedFiles(cropStream);
-  log(cropFilePath);
-}
-
+_button01(BuildContext context) async {}
 
 _button02(BuildContext context) async {}
 

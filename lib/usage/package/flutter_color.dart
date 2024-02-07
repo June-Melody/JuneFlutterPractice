@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:flutter_color/flutter_color.dart';
 
-import '../../../util/start_app.dart';
+import '../../util/start_app.dart';
 
 _button00(BuildContext context) async {
-  bool isInternet = await InternetConnectionChecker().hasConnection;
-  print(isInternet);
+  // color to grey
+  Color color = Colors.blue;
+  int? light = 3;
+  int? dark = 2;
+  if (Get.isDarkMode) {
+    color = color.lighter(light ?? 3);
+  } else {
+    color = color.darker(dark ?? 2);
+  }
 }
 
 _button01(BuildContext context) async {}
