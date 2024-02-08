@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 import '../../../../../../../../../../../../util/start_app.dart';
 import '../config/di.dart';
 import '../config/loading.dart';
@@ -37,8 +35,7 @@ class NewItemView extends StatefulWidget {
   _ViewState createState() => _ViewState();
 }
 
-class _ViewState extends State<NewItemView>
-    with AfterLayoutMixin<NewItemView> {
+class _ViewState extends State<NewItemView> with AfterLayoutMixin<NewItemView> {
   bool isReadyView = false;
 
   @override

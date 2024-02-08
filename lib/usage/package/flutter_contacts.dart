@@ -6,7 +6,7 @@ import '../../util/start_app.dart';
 _button00(BuildContext context) async {
   // get all contact
   List<Contact> contacts = [];
-  if(await FlutterContacts.requestPermission()) {
+  if (await FlutterContacts.requestPermission()) {
     contacts = await FlutterContacts.getContacts();
 
     for (Contact contact in contacts) {
@@ -14,17 +14,14 @@ _button00(BuildContext context) async {
     }
 
     await Future.wait([
-      for (Contact contact in contacts)
-        FlutterContacts.getContact(contact.id)
+      for (Contact contact in contacts) FlutterContacts.getContact(contact.id)
     ]);
   }
 
   return contacts;
 }
 
-_button01(BuildContext context) async {
-
-}
+_button01(BuildContext context) async {}
 
 _button02(BuildContext context) async {}
 

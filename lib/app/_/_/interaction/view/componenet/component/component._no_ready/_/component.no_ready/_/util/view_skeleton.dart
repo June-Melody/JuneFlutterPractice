@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 import '../../../../../../../../../../../../util/start_app.dart';
 import '../config/di.dart';
 import '../config/params.dart';
@@ -33,8 +31,7 @@ class NewView extends StatefulWidget {
   _ViewState createState() => _ViewState();
 }
 
-class _ViewState extends State<NewView>
-    with AfterLayoutMixin<NewView> {
+class _ViewState extends State<NewView> with AfterLayoutMixin<NewView> {
   @override
   Widget build(BuildContext context) {
     return V(

@@ -11,12 +11,11 @@ _button00(BuildContext context) async {
 
 _button01(BuildContext context) async {
   var cropStream =
-  await InstaAssetsPickerKit().getSinglePhoto(context, '제목', Colors.blue);
+      await InstaAssetsPickerKit().getSinglePhoto(context, '제목', Colors.blue);
   var cropFilePath = await InstaAssetsPickerKit()
       .getAllSelectedAssetsAndCroppedFiles(cropStream);
   log(cropFilePath);
 }
-
 
 _button02(BuildContext context) async {}
 

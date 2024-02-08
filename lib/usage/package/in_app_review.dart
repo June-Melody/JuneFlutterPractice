@@ -9,7 +9,6 @@ _button00(BuildContext context) async {
   if (await inAppReview.isAvailable()) {
     inAppReview.requestReview();
   }
-
 }
 
 _button01(BuildContext context) async {

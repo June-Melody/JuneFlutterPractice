@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 import '../../../../../../../../../../../../util/start_app.dart';
 import '../config/di.dart';
 import '../config/loading.dart';

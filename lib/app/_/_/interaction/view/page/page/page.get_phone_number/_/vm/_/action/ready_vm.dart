@@ -15,7 +15,6 @@ Future<void> readyVMAction(ready_vm_sync.BuildContext context, NewParams params,
   viewModel.userDialCode = details.dialCode ?? "+1";
   viewModel.userCountryCode = details.alpha2Code ?? "US";
 
-
   // get information here that you need to get
 
   viewModel.util.notify();

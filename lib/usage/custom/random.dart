@@ -3,7 +3,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-
 import '../../util/start_app.dart';
 
 _button00(BuildContext context) async {
@@ -53,8 +52,8 @@ _button06(BuildContext context) async {
   var len = 20;
   var r = Random();
   const _chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz';
-  var stringWithoutNumber = List.generate(len, (index) => _chars[r.nextInt(_chars.length)])
-      .join();
+  var stringWithoutNumber =
+      List.generate(len, (index) => _chars[r.nextInt(_chars.length)]).join();
   log(stringWithoutNumber);
 }
 
@@ -67,11 +66,9 @@ _button07(BuildContext context) async {
   log(base64);
 }
 
-_button08(BuildContext context) async {
-}
+_button08(BuildContext context) async {}
 
-_button09(BuildContext context) async {
-}
+_button09(BuildContext context) async {}
 
 _button10(BuildContext context) async {
   // random name
@@ -138,13 +135,15 @@ _button18(BuildContext context) async {
 
 _button19(BuildContext context) async {
   // random date time inside one years
-  var dateTime = DateTime.now().add(Duration(hours: -1 * Random().nextInt(24 * 365)));
+  var dateTime =
+      DateTime.now().add(Duration(hours: -1 * Random().nextInt(24 * 365)));
   log(dateTime);
 }
 
 _button20(BuildContext context) async {
   // random date time inside one months
-  var dateTime = DateTime.now().add(Duration(hours: -1 * Random().nextInt(24 * 30)));
+  var dateTime =
+      DateTime.now().add(Duration(hours: -1 * Random().nextInt(24 * 30)));
   log(dateTime);
 }
 

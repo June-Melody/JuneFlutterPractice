@@ -8,9 +8,7 @@ _button00(BuildContext context) async {
       .movePageOffAllWithLoadingView(context);
 }
 
-_button01(BuildContext context) async {
-
-}
+_button01(BuildContext context) async {}
 
 _button02(BuildContext context) async {}
 

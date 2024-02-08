@@ -20,7 +20,6 @@ class V extends StatefulWidget {
 }
 
 class _VState extends State<V> {
-
   @override
   Widget build(BuildContext context) {
     return GetBuilder<NewVM>(

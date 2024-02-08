@@ -40,7 +40,6 @@ readyForRunAppStart() async {
 
   await readyForGoogleMobileAds();
 
-
   // await readyObserver();
 }
 
@@ -60,7 +59,6 @@ readyForAppStart(BuildContext context) async {
   await readyForConnectivityPlus();
   await readyForMyAppVersionChange();
   await readyForAwesomeNotifications();
-
 
   // await MyPromiseAllSpell().returnVoid([
   //   readyForFirebaseMessaging()

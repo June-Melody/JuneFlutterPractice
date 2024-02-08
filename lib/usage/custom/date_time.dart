@@ -188,8 +188,7 @@ _button21(BuildContext context) async {
   log(_);
 }
 
-_button22(BuildContext context) async {
-}
+_button22(BuildContext context) async {}
 
 _button23(BuildContext context) async {}
 

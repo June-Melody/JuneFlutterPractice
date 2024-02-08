@@ -29,14 +29,16 @@ _button03(BuildContext context) async {
   // in web view without java script
   await launchUrl(Uri.parse("https://www.google.com"),
       mode: LaunchMode.inAppWebView,
-      webViewConfiguration: const WebViewConfiguration(enableJavaScript: false));
+      webViewConfiguration:
+          const WebViewConfiguration(enableJavaScript: false));
 }
 
 _button04(BuildContext context) async {
   // in web view without dom storage
   await launchUrl(Uri.parse("https://www.google.com"),
       mode: LaunchMode.inAppWebView,
-      webViewConfiguration: const WebViewConfiguration(enableDomStorage: false));
+      webViewConfiguration:
+          const WebViewConfiguration(enableDomStorage: false));
 }
 
 _button05(BuildContext context) async {
@@ -76,7 +78,6 @@ _button09(BuildContext context) async {
   // in browser
   await launchUrl(Uri.parse("https://www.google.com"),
       mode: LaunchMode.externalApplication);
-
 }
 
 _button10(BuildContext context) async {
@@ -91,20 +92,22 @@ _button11(BuildContext context) async {
   // in web view without java script
   await launchUrl(Uri.parse("https://www.google.com"),
       mode: LaunchMode.inAppWebView,
-      webViewConfiguration: const WebViewConfiguration(enableJavaScript: false));
+      webViewConfiguration:
+          const WebViewConfiguration(enableJavaScript: false));
 }
 
 _button12(BuildContext context) async {
   // in web view without dom storage
   await launchUrl(Uri.parse("https://www.google.com"),
       mode: LaunchMode.inAppWebView,
-      webViewConfiguration: const WebViewConfiguration(enableDomStorage: false));
+      webViewConfiguration:
+          const WebViewConfiguration(enableDomStorage: false));
 }
 
-_button13(BuildContext context) async
-{
+_button13(BuildContext context) async {
   // universal link ios
-  final bool nativeAppLaunchSucceeded = await launchUrl(Uri.parse("https://www.google.com"),
+  final bool nativeAppLaunchSucceeded = await launchUrl(
+      Uri.parse("https://www.google.com"),
       mode: LaunchMode.externalNonBrowserApplication);
   if (!nativeAppLaunchSucceeded) {
     await launchUrl(
@@ -112,7 +115,6 @@ _button13(BuildContext context) async
       mode: LaunchMode.inAppWebView,
     );
   }
-
 }
 
 _button14(BuildContext context) async {

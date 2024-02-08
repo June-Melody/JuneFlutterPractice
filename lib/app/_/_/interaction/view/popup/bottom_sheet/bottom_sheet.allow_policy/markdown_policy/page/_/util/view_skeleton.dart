@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 import '../../../../../../../../../../../../util/start_app.dart';
 import '../config/di.dart';
 import '../config/loading.dart';
@@ -37,8 +35,7 @@ class NewMarkdownPolicyViewDoNotPutViewAsWidget extends StatefulWidget {
   _ViewState createState() => _ViewState();
 }
 
-class _ViewState
-    extends State<NewMarkdownPolicyViewDoNotPutViewAsWidget>
+class _ViewState extends State<NewMarkdownPolicyViewDoNotPutViewAsWidget>
     with AfterLayoutMixin<NewMarkdownPolicyViewDoNotPutViewAsWidget> {
   bool isReadyView = false;
 

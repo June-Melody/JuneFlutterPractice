@@ -21,10 +21,10 @@ class NewMarkdownTempleteNavigator {
       {Transition? transition, Key? heroKey}) async {
     params.context = context;
     context.loaderOverlay.show(
-    widgetBuilder: (progress) {
-      return Container();
-    },
-  );
+      widgetBuilder: (progress) {
+        return Container();
+      },
+    );
     if (!await readyView(params, context, tag)) {
       context.loaderOverlay.hide();
       return;
@@ -44,10 +44,10 @@ class NewMarkdownTempleteNavigator {
       {Transition? transition, Key? heroKey}) async {
     params.context = context;
     context.loaderOverlay.show(
-    widgetBuilder: (progress) {
-      return Container();
-    },
-  );
+      widgetBuilder: (progress) {
+        return Container();
+      },
+    );
     if (!await readyView(params, context, tag)) {
       context.loaderOverlay.hide();
       return;
@@ -67,10 +67,10 @@ class NewMarkdownTempleteNavigator {
       {Transition? transition, Key? heroKey}) async {
     params.context = context;
     context.loaderOverlay.show(
-    widgetBuilder: (progress) {
-      return Container();
-    },
-  );
+      widgetBuilder: (progress) {
+        return Container();
+      },
+    );
     if (!await readyView(params, context, tag)) {
       context.loaderOverlay.hide();
       return;
