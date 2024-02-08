@@ -5,6 +5,7 @@ import 'util.dart';
 
 class NewVM extends GetxController {
   /// write your variables here.
+  int selectedIndex = 0;
 
   /// basic
   NewUtilVM util;

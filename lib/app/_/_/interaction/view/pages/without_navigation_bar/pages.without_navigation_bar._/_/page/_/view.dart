@@ -20,7 +20,6 @@ class V extends StatefulWidget {
 }
 
 class _VState extends State<V> {
-  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +28,7 @@ class _VState extends State<V> {
       autoRemove: false,
       builder: (vmNew) => Scaffold(
         body: IndexedStack(
-          index: _selectedIndex,
+          index: vmNew.selectedIndex,
           children: [
             //////////////////////////////////////////////////////////////////
             Container().backgroundColor(Colors.red),
