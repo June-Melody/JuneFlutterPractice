@@ -1,4 +1,4 @@
-package flutter.lego.architecture
+package june.lee.love
 
 import io.flutter.embedding.android.FlutterActivity
 
