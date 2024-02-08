@@ -1,15 +1,18 @@
-# Junelee Flutter Pattern.lego-flutter
-The Junelee Flutter Pattern is an architecture that incorporates a lot of effort to develop and release an app in one shot, featuring four key Lego pieces and various other Legos
+# Lego Flutter
+Lego Flutter is a Flutter architecture that greatly enhances productivity for app development. It's also designed to easily create and add various Legos (code blocks) just like assembling Lego pieces.
 
-## key Legos
-- getx-pattern.lego-flutter
-    - The getx-pattern is an elegant front-end pattern that uses GetX to develop pages, components, bottom sheets, dialogs, snack bars, tooltips, and more, all through a single unified method.
-- database-pattern.lego-flutter
-    - The database-pattern is an elegant backend pattern designed to handle various databases such as Firebase, SQFlite, Secure Storage, Get Storage, etc., through a single unified method.
-- patterm.lego-firebase_function
-    - The junelee.pattern.lego-firebase_function is a pattern that combines the database-pattern.lego-firebase_function, firebase_messaging.lego-firebase_function, firebase_messaging.lego_flutter, and various other legos to make communication with the server extremely easy and convenient.
-- fastlane-pattern.lego-flutter
-    - The fastlane-pattern.lego-flutter is a lego that provides a very easy way to implement CI/CD using fastlane, offering detailed guidance on the method and code.
+## Get Started
+1. Click on "Use this template" at the top to create your own repository, and then clone the created repository to your computer.
+2. open the Find and Replace window (Edit -> Find -> Replace in Files...) and search for "june.lee.love" to replace it with the desired package name.
+3. Change 'name: love' in pubspec.yaml to name:
+4. Enter the following command in the terminal to start the project.
+```bash
+flutter pub get
+flutter run
+```
 
-## Views
-[Here](https://github.com/junelee-pattern/junelee.flutter.pattern.view/blob/main/README.md), you can immediately use various views of this pattern.
+## Documentation
+Lego Flutter has a clear method of use overall, related to making apps, including UI, backend, and adding features. Please refer to the document to create your app!
+
+
+
