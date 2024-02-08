@@ -1,42 +1,141 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_phoenix/flutter_phoenix.dart';
+import 'dart:io';
 
-import '../../../util/start_app.dart';
+import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../../util/start_app.dart';
 
 _button00(BuildContext context) async {
-  // re start app
-  Phoenix.rebirth(context);
+  // share text
+  Share.share("text", subject: "subject");
 }
 
-_button01(BuildContext context) async {}
+_button01(BuildContext context) async {
+  // in browser
+  await launchUrl(Uri.parse("https://www.google.com"),
+      mode: LaunchMode.externalApplication);
+}
 
-_button02(BuildContext context) async {}
+_button02(BuildContext context) async {
+  // in web view or vc
+  await launchUrl(Uri.parse("https://www.google.com"),
+      mode: LaunchMode.inAppWebView,
+      webViewConfiguration: const WebViewConfiguration(
+          headers: <String, String>{'my_header_key': 'my_header_value'}));
+}
 
-_button03(BuildContext context) async {}
+_button03(BuildContext context) async {
+  // in web view without java script
+  await launchUrl(Uri.parse("https://www.google.com"),
+      mode: LaunchMode.inAppWebView,
+      webViewConfiguration: const WebViewConfiguration(enableJavaScript: false));
+}
 
-_button04(BuildContext context) async {}
+_button04(BuildContext context) async {
+  // in web view without dom storage
+  await launchUrl(Uri.parse("https://www.google.com"),
+      mode: LaunchMode.inAppWebView,
+      webViewConfiguration: const WebViewConfiguration(enableDomStorage: false));
+}
 
-_button05(BuildContext context) async {}
+_button05(BuildContext context) async {
+  // universal link ios
+  await launchUrl(Uri.parse("https://www.google.com"),
+      mode: LaunchMode.externalNonBrowserApplication);
+}
 
-_button06(BuildContext context) async {}
+_button06(BuildContext context) async {
+  // phone call
+  final Uri launchUri = Uri(
+    scheme: 'tel',
+    path: "010-1234-5678",
+  );
+  await launchUrl(launchUri);
+}
 
-_button07(BuildContext context) async {}
+_button07(BuildContext context) async {
+  // send sms
+  String url = "";
+  if (Platform.isAndroid) {
+    //FOR Android
+    url = 'sms:010-1234-5678?body=hello';
+    await launch(url);
+  } else if (Platform.isIOS) {
+    //FOR IOS
+    url = 'sms:010-1234-5678?body=hello';
+  }
+}
 
-_button08(BuildContext context) async {}
+_button08(BuildContext context) async {
+  // share text
+  Share.share("text", subject: "subject");
+}
 
-_button09(BuildContext context) async {}
+_button09(BuildContext context) async {
+  // in browser
+  await launchUrl(Uri.parse("https://www.google.com"),
+      mode: LaunchMode.externalApplication);
 
-_button10(BuildContext context) async {}
+}
 
-_button11(BuildContext context) async {}
+_button10(BuildContext context) async {
+  // in web view or vc
+  await launchUrl(Uri.parse("https://www.google.com"),
+      mode: LaunchMode.inAppWebView,
+      webViewConfiguration: const WebViewConfiguration(
+          headers: <String, String>{'my_header_key': 'my_header_value'}));
+}
 
-_button12(BuildContext context) async {}
+_button11(BuildContext context) async {
+  // in web view without java script
+  await launchUrl(Uri.parse("https://www.google.com"),
+      mode: LaunchMode.inAppWebView,
+      webViewConfiguration: const WebViewConfiguration(enableJavaScript: false));
+}
 
-_button13(BuildContext context) async {}
+_button12(BuildContext context) async {
+  // in web view without dom storage
+  await launchUrl(Uri.parse("https://www.google.com"),
+      mode: LaunchMode.inAppWebView,
+      webViewConfiguration: const WebViewConfiguration(enableDomStorage: false));
+}
 
-_button14(BuildContext context) async {}
+_button13(BuildContext context) async
+{
+  // universal link ios
+  final bool nativeAppLaunchSucceeded = await launchUrl(Uri.parse("https://www.google.com"),
+      mode: LaunchMode.externalNonBrowserApplication);
+  if (!nativeAppLaunchSucceeded) {
+    await launchUrl(
+      Uri.parse("https://www.google.com"),
+      mode: LaunchMode.inAppWebView,
+    );
+  }
 
-_button15(BuildContext context) async {}
+}
+
+_button14(BuildContext context) async {
+  // phone call
+  final Uri launchUri = Uri(
+    scheme: 'tel',
+    path: "010-1234-5678",
+  );
+  await launchUrl(launchUri);
+}
+
+_button15(BuildContext context) async {
+  // send sms
+  String url = "";
+  if (Platform.isAndroid) {
+    //FOR Android
+    url = 'sms:010-1234-5678?body=hello';
+    await launch(url);
+  } else if (Platform.isIOS) {
+    //FOR IOS
+    url = 'sms:010-1234-5678?body=hello';
+  }
+}
 
 _button16(BuildContext context) async {}
 

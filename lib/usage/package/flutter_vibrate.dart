@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:phone_numbers_parser/phone_numbers_parser.dart';
+import 'package:flutter_vibrate/flutter_vibrate.dart';
 
-import '../../../util/start_app.dart';
+import '../../util/start_app.dart';
 
 _button00(BuildContext context) async {
-  // verify phone number
-  String phoneNumber = "1234567890";
-  String countryCode = "US";
-  bool result = PhoneNumber.parse(phoneNumber,
-          callerCountry: isoCodeConversionMap[countryCode])
-      .isValid(type: PhoneNumberType.mobile);
-  print(result);
+  // light vibration
+  Vibrate.feedback(FeedbackType.selection);
 }
 
 _button01(BuildContext context) async {
-  // get international code
-  String phoneNumber = "1234567890";
-  String countryCode = "US";
-  String result = PhoneNumber.parse(phoneNumber,
-          callerCountry: isoCodeConversionMap[countryCode])
-      .international;
-  print(result);
+  // normal vibration
+  Vibrate.feedback(FeedbackType.medium);
 }
 
 _button02(BuildContext context) async {}

@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vibrate/flutter_vibrate.dart';
 
-import '../../../util/start_app.dart';
+import '../../util/start_app.dart';
+import 'package:junes_flutter_architecture/junes_flutter_architecture.dart';
 
 _button00(BuildContext context) async {
-  // light vibration
-  Vibrate.feedback(FeedbackType.selection);
+  var cropFilePath = await InstaAssetsPickerKit()
+      .getCropPathSinglePhoto(context, "제목", Colors.blue);
+  log(cropFilePath);
 }
 
 _button01(BuildContext context) async {
-  // normal vibration
-  Vibrate.feedback(FeedbackType.medium);
+  var cropStream =
+  await InstaAssetsPickerKit().getSinglePhoto(context, '제목', Colors.blue);
+  var cropFilePath = await InstaAssetsPickerKit()
+      .getAllSelectedAssetsAndCroppedFiles(cropStream);
+  log(cropFilePath);
 }
+
 
 _button02(BuildContext context) async {}
 

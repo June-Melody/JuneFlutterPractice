@@ -97,6 +97,7 @@ dependencies:
   photo_manager: ^3.0.0-dev.5
   font_awesome_flutter:
   flutter_boxicons:
+  google_mobile_ads: ^4.0.0
 
   junes_flutter_architecture: ^0.8.5
 

@@ -1,141 +1,78 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:share_plus/share_plus.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-import '../../../util/start_app.dart';
+import '../../util/start_app.dart';
 
+/*
+  setLight() {
+    Get.changeTheme(ThemeConfig.appTheme);
+  }
+
+  setDark() {
+    Get.changeTheme(ThemeConfig.appDarkTheme);
+  }
+
+  bool isDarkMode() {
+    return Get.isDarkMode;
+  }
+
+  switchTheme() {
+    log("Get.isDarkMode:${Get.isDarkMode}");
+    Get.changeTheme(
+        Get.isDarkMode ? ThemeConfig.appTheme : ThemeConfig.appDarkTheme);
+  }
+
+  deleteAllInstance() {
+    Get.deleteAll(force: true);
+  }
+ */
 _button00(BuildContext context) async {
-  // share text
-  Share.share("text", subject: "subject");
+  // set light
+  Get.changeTheme(ThemeConfig.appTheme);
 }
 
 _button01(BuildContext context) async {
-  // in browser
-  await launchUrl(Uri.parse("https://www.google.com"),
-      mode: LaunchMode.externalApplication);
+  // set dark
+  Get.changeTheme(ThemeConfig.appDarkTheme);
 }
 
 _button02(BuildContext context) async {
-  // in web view or vc
-  await launchUrl(Uri.parse("https://www.google.com"),
-      mode: LaunchMode.inAppWebView,
-      webViewConfiguration: const WebViewConfiguration(
-          headers: <String, String>{'my_header_key': 'my_header_value'}));
+  // is dark mode
+  Get.isDarkMode;
 }
 
 _button03(BuildContext context) async {
-  // in web view without java script
-  await launchUrl(Uri.parse("https://www.google.com"),
-      mode: LaunchMode.inAppWebView,
-      webViewConfiguration: const WebViewConfiguration(enableJavaScript: false));
+  // switch theme
+  log("Get.isDarkMode:${Get.isDarkMode}");
+  Get.changeTheme(
+      Get.isDarkMode ? ThemeConfig.appTheme : ThemeConfig.appDarkTheme);
 }
 
 _button04(BuildContext context) async {
-  // in web view without dom storage
-  await launchUrl(Uri.parse("https://www.google.com"),
-      mode: LaunchMode.inAppWebView,
-      webViewConfiguration: const WebViewConfiguration(enableDomStorage: false));
+  // delete all instance
+  Get.deleteAll(force: true);
 }
 
-_button05(BuildContext context) async {
-  // universal link ios
-  await launchUrl(Uri.parse("https://www.google.com"),
-      mode: LaunchMode.externalNonBrowserApplication);
-}
+_button05(BuildContext context) async {}
 
-_button06(BuildContext context) async {
-  // phone call
-  final Uri launchUri = Uri(
-    scheme: 'tel',
-    path: "010-1234-5678",
-  );
-  await launchUrl(launchUri);
-}
+_button06(BuildContext context) async {}
 
-_button07(BuildContext context) async {
-  // send sms
-  String url = "";
-  if (Platform.isAndroid) {
-    //FOR Android
-    url = 'sms:010-1234-5678?body=hello';
-    await launch(url);
-  } else if (Platform.isIOS) {
-    //FOR IOS
-    url = 'sms:010-1234-5678?body=hello';
-  }
-}
+_button07(BuildContext context) async {}
 
-_button08(BuildContext context) async {
-  // share text
-  Share.share("text", subject: "subject");
-}
+_button08(BuildContext context) async {}
 
-_button09(BuildContext context) async {
-  // in browser
-  await launchUrl(Uri.parse("https://www.google.com"),
-      mode: LaunchMode.externalApplication);
+_button09(BuildContext context) async {}
 
-}
+_button10(BuildContext context) async {}
 
-_button10(BuildContext context) async {
-  // in web view or vc
-  await launchUrl(Uri.parse("https://www.google.com"),
-      mode: LaunchMode.inAppWebView,
-      webViewConfiguration: const WebViewConfiguration(
-          headers: <String, String>{'my_header_key': 'my_header_value'}));
-}
+_button11(BuildContext context) async {}
 
-_button11(BuildContext context) async {
-  // in web view without java script
-  await launchUrl(Uri.parse("https://www.google.com"),
-      mode: LaunchMode.inAppWebView,
-      webViewConfiguration: const WebViewConfiguration(enableJavaScript: false));
-}
+_button12(BuildContext context) async {}
 
-_button12(BuildContext context) async {
-  // in web view without dom storage
-  await launchUrl(Uri.parse("https://www.google.com"),
-      mode: LaunchMode.inAppWebView,
-      webViewConfiguration: const WebViewConfiguration(enableDomStorage: false));
-}
+_button13(BuildContext context) async {}
 
-_button13(BuildContext context) async
-{
-  // universal link ios
-  final bool nativeAppLaunchSucceeded = await launchUrl(Uri.parse("https://www.google.com"),
-      mode: LaunchMode.externalNonBrowserApplication);
-  if (!nativeAppLaunchSucceeded) {
-    await launchUrl(
-      Uri.parse("https://www.google.com"),
-      mode: LaunchMode.inAppWebView,
-    );
-  }
+_button14(BuildContext context) async {}
 
-}
-
-_button14(BuildContext context) async {
-  // phone call
-  final Uri launchUri = Uri(
-    scheme: 'tel',
-    path: "010-1234-5678",
-  );
-  await launchUrl(launchUri);
-}
-
-_button15(BuildContext context) async {
-  // send sms
-  String url = "";
-  if (Platform.isAndroid) {
-    //FOR Android
-    url = 'sms:010-1234-5678?body=hello';
-    await launch(url);
-  } else if (Platform.isIOS) {
-    //FOR IOS
-    url = 'sms:010-1234-5678?body=hello';
-  }
-}
+_button15(BuildContext context) async {}
 
 _button16(BuildContext context) async {}
 

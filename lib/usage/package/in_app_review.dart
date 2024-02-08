@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_color/flutter_color.dart';
+import 'package:in_app_review/in_app_review.dart';
 
-import '../../../util/start_app.dart';
+import '../../util/start_app.dart';
 
 _button00(BuildContext context) async {
-  // color to grey
-  Color color = Colors.blue;
-  int? light = 3;
-  int? dark = 2;
-  if (Get.isDarkMode) {
-    color = color.lighter(light ?? 3);
-  } else {
-    color = color.darker(dark ?? 2);
+  // request rate
+  final InAppReview inAppReview = InAppReview.instance;
+  if (await inAppReview.isAvailable()) {
+    inAppReview.requestReview();
   }
+
 }
 
-_button01(BuildContext context) async {}
+_button01(BuildContext context) async {
+  // open store url
+  final InAppReview inAppReview = InAppReview.instance;
+  inAppReview.openStoreListing(
+    appStoreId: appStoreId,
+  );
+}
 
 _button02(BuildContext context) async {}
 

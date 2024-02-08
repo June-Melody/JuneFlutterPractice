@@ -1,359 +1,195 @@
-import 'dart:io';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_image_compress/flutter_image_compress.dart';
+import 'package:intl/intl.dart';
 
-import '../../../util/start_app.dart';
+import '../../util/start_app.dart';
 
-/*
-Future<Uint8List?> getThumbnailData(
-      {Uint8List? imageData, File? file, String? assetsPath}) async {
-    int minHeight = 150;
-    int minWidth = 150;
-    int quality = 40;
-    int rotate = 0;
-
-    if (imageData != null) {
-      Uint8List? compressData =
-          await FlutterImageCompressKit().compressBytesImageToBytes(
-        imageData,
-        minHeight: minHeight, //1920,
-        minWidth: minWidth, //1080,
-        quality: quality,
-        rotate: rotate,
-      );
-
-      return compressData;
-    } else if (file != null) {
-      Uint8List? compressData =
-          await FlutterImageCompressKit().compressFileImageToBytes(
-        file,
-        minHeight: minHeight, //1920,
-        minWidth: minWidth, //1080,
-        quality: quality,
-        rotate: rotate,
-      );
-      return compressData;
-    } else if (assetsPath != null) {
-      Uint8List? compressData =
-          await FlutterImageCompressKit().compressAssetImageToBytes(
-        assetsPath,
-        minHeight: minHeight, //1920,
-        minWidth: minWidth, //1080,
-        quality: quality,
-        rotate: rotate,
-      );
-      return compressData;
-    }
-
-    return null;
-  }
-
-  Future<Uint8List?> getThumbnail2Data(
-      {Uint8List? imageData, File? file, String? assetsPath}) async {
-    int minHeight = 200;
-    int minWidth = 200;
-    int quality = 50;
-    int rotate = 0;
-
-    if (imageData != null) {
-      Uint8List? compressData =
-          await FlutterImageCompressKit().compressBytesImageToBytes(
-        imageData,
-        minHeight: minHeight, //1920,
-        minWidth: minWidth, //1080,
-        quality: quality,
-        rotate: rotate,
-      );
-
-      return compressData;
-    } else if (file != null) {
-      Uint8List? compressData =
-          await FlutterImageCompressKit().compressFileImageToBytes(
-        file,
-        minHeight: minHeight, //1920,
-        minWidth: minWidth, //1080,
-        quality: quality,
-        rotate: rotate,
-      );
-      return compressData;
-    } else if (assetsPath != null) {
-      Uint8List? compressData =
-          await FlutterImageCompressKit().compressAssetImageToBytes(
-        assetsPath,
-        minHeight: minHeight, //1920,
-        minWidth: minWidth, //1080,
-        quality: quality,
-        rotate: rotate,
-      );
-      return compressData;
-    }
-
-    return null;
-  }
-
-  Future<Uint8List?> getStandardData(
-      {Uint8List? imageData, File? file, String? assetsPath}) async {
-    int minHeight = 500;
-    int minWidth = 500;
-    int quality = 90;
-    int rotate = 0;
-
-    if (imageData != null) {
-      Uint8List? compressData =
-          await FlutterImageCompressKit().compressBytesImageToBytes(
-        imageData,
-        minHeight: minHeight, //1920,
-        minWidth: minWidth, //1080,
-        quality: quality,
-        rotate: rotate,
-      );
-
-      return compressData;
-    } else if (file != null) {
-      Uint8List? compressData =
-          await FlutterImageCompressKit().compressFileImageToBytes(
-        file,
-        minHeight: minHeight, //1920,
-        minWidth: minWidth, //1080,
-        quality: quality,
-        rotate: rotate,
-      );
-      return compressData;
-    } else if (assetsPath != null) {
-      Uint8List? compressData =
-          await FlutterImageCompressKit().compressAssetImageToBytes(
-        assetsPath,
-        minHeight: minHeight, //1920,
-        minWidth: minWidth, //1080,
-        quality: quality,
-        rotate: rotate,
-      );
-      return compressData;
-    }
-
-    return null;
-  }
-
-  Future<List<Uint8List>> getThumbnails(List<Uint8List> photos) async {
-    List _ = await PromiseAllKit()
-        .returnVoid(photos.map((e) => getThumbnailData(imageData: e)));
-    return _.map((e) => e as Uint8List).toList();
-  }
-
-  Future<List<Uint8List>> getStandardPhotos(List<Uint8List> photos) async {
-    List _ = await PromiseAllKit()
-        .returnVoid(photos.map((e) => getStandardData(imageData: e)));
-    return _.map((e) => e as Uint8List).toList();
-  }
- */
 _button00(BuildContext context) async {
-  // get thumbnail data
-  Uint8List? imageData = null;
-  File file = File('');
-  String? assetsPath = '';
-
-  int minHeight = 150;
-  int minWidth = 150;
-  int quality = 40;
-  int rotate = 0;
-
-  Uint8List? compressData;
-  if (imageData != null) {
-    compressData = await FlutterImageCompress.compressWithList(
-      imageData,
-      minHeight: minHeight, //1920,
-      minWidth: minWidth, //1080,
-      quality: quality,
-      rotate: rotate,
-    );
-
-    // return compressData;
-  } else if (file != null) {
-    compressData = await FlutterImageCompress.compressWithFile(
-      file.path,
-      minHeight: minHeight,
-      //1920,
-      minWidth: minWidth,
-      //1080,
-      quality: quality,
-      rotate: rotate,
-      inSampleSize: 1,
-      autoCorrectionAngle: true,
-      format: CompressFormat.jpeg,
-      keepExif: false,
-      numberOfRetries: 5,
-    );
-    // return compressData;
-  } else if (assetsPath != null) {
-    compressData = await FlutterImageCompress.compressAssetImage(
-      assetsPath,
-      minHeight: minHeight,
-      //1920,
-      minWidth: minWidth,
-      //1080,
-      quality: quality,
-      rotate: rotate,
-      autoCorrectionAngle: true,
-      format: CompressFormat.jpeg,
-      keepExif: false,
-    );
-  }
-
-  log(compressData?.length);
+  // get now micros time
+  var _ = DateTime.now().microsecondsSinceEpoch;
+  log(_);
 }
 
 _button01(BuildContext context) async {
-  // get thumbnail2 data
-  Uint8List? imageData = null;
-  File file = File('');
-  String? assetsPath = '';
-
-  int minHeight = 200;
-  int minWidth = 200;
-  int quality = 50;
-  int rotate = 0;
-
-  Uint8List? compressData;
-  if (imageData != null) {
-    compressData = await FlutterImageCompress.compressWithList(
-      imageData,
-      minHeight: minHeight, //1920,
-      minWidth: minWidth, //1080,
-      quality: quality,
-      rotate: rotate,
-    );
-
-    // return compressData;
-  } else if (file != null) {
-    compressData = await FlutterImageCompress.compressWithFile(
-      file.path,
-      minHeight: minHeight,
-      //1920,
-      minWidth: minWidth,
-      //1080,
-      quality: quality,
-      rotate: rotate,
-      inSampleSize: 1,
-      autoCorrectionAngle: true,
-      format: CompressFormat.jpeg,
-      keepExif: false,
-      numberOfRetries: 5,
-    );
-    // return compressData;
-  } else if (assetsPath != null) {
-    compressData = await FlutterImageCompress.compressAssetImage(
-      assetsPath,
-      minHeight: minHeight,
-      //1920,
-      minWidth: minWidth,
-      //1080,
-      quality: quality,
-      rotate: rotate,
-      autoCorrectionAngle: true,
-      format: CompressFormat.jpeg,
-      keepExif: false,
-    );
-  }
-
-  log(compressData?.length);
+  // get now millis time
+  var _ = DateTime.now().millisecondsSinceEpoch;
+  log(_);
 }
 
 _button02(BuildContext context) async {
-  // get standard data
-  Uint8List? imageData = null;
-  File file = File('');
-  String? assetsPath = '';
-
-  int minHeight = 500;
-  int minWidth = 500;
-  int quality = 90;
-  int rotate = 0;
-
-  Uint8List? compressData;
-  if (imageData != null) {
-    compressData = await FlutterImageCompress.compressWithList(
-      imageData,
-      minHeight: minHeight, //1920,
-      minWidth: minWidth, //1080,
-      quality: quality,
-      rotate: rotate,
-    );
-
-    // return compressData;
-  } else if (file != null) {
-    compressData = await FlutterImageCompress.compressWithFile(
-      file.path,
-      minHeight: minHeight,
-      //1920,
-      minWidth: minWidth,
-      //1080,
-      quality: quality,
-      rotate: rotate,
-      inSampleSize: 1,
-      autoCorrectionAngle: true,
-      format: CompressFormat.jpeg,
-      keepExif: false,
-      numberOfRetries: 5,
-    );
-    // return compressData;
-  } else if (assetsPath != null) {
-    compressData = await FlutterImageCompress.compressAssetImage(
-      assetsPath,
-      minHeight: minHeight,
-      //1920,
-      minWidth: minWidth,
-      //1080,
-      quality: quality,
-      rotate: rotate,
-      autoCorrectionAngle: true,
-      format: CompressFormat.jpeg,
-      keepExif: false,
-    );
-  }
-
-  log(compressData?.length);
+  // convert to micros
+  var dateTime = DateTime.now();
+  var _ = dateTime.microsecondsSinceEpoch;
+  log(_);
 }
 
-_button03(BuildContext context) async {}
+_button03(BuildContext context) async {
+  // convert to date time object
+  var micros = DateTime.now().microsecondsSinceEpoch;
+  var _ = DateTime.fromMicrosecondsSinceEpoch(micros);
+  log(_);
+}
 
-_button04(BuildContext context) async {}
+_button04(BuildContext context) async {
+  // convert to date time object from millisecond
+  var micros = DateTime.now().millisecondsSinceEpoch;
+  var _ = DateTime.fromMillisecondsSinceEpoch(micros);
+  log(_);
+}
 
-_button05(BuildContext context) async {}
+_button05(BuildContext context) async {
+  // get month and day from date time object
+  var dateTime = DateTime.now();
+  var _ = DateFormat('M/d').format(dateTime);
+  log(_);
+}
 
-_button06(BuildContext context) async {}
+_button06(BuildContext context) async {
+  // get hour minute
+  var dateTime = DateTime.now();
+  var _ = DateFormat.jm().format(dateTime);
+  log(_);
+}
 
-_button07(BuildContext context) async {}
+_button07(BuildContext context) async {
+  // get hour minute by micro time
+  var microTime = DateTime.now().microsecondsSinceEpoch;
+  var _ =
+      DateFormat.jm().format(DateTime.fromMicrosecondsSinceEpoch(microTime));
+  log(_);
+}
 
-_button08(BuildContext context) async {}
+_button08(BuildContext context) async {
+  // get pm hour minute by micro time
+  var microTime = DateTime.now().microsecondsSinceEpoch;
+  var _ = DateFormat('a h:mm').format(DateTime.fromMicrosecondsSinceEpoch(
+      microTime)); //DateFormat.Hm().format(convertToDateTimeObject(microTime));
+  log(_);
+}
 
-_button09(BuildContext context) async {}
+_button09(BuildContext context) async {
+  // get hour minute second
+  var dateTime = DateTime.now();
+  var _ = DateFormat.jms().format(dateTime);
+  log(_);
+}
 
-_button10(BuildContext context) async {}
+_button10(BuildContext context) async {
+  // get hour minute second by micro time
+  var microTime = DateTime.now().microsecondsSinceEpoch;
+  var _ =
+      DateFormat.jms().format(DateTime.fromMicrosecondsSinceEpoch(microTime));
+  log(_);
+}
 
-_button11(BuildContext context) async {}
+_button11(BuildContext context) async {
+  // get string by millis time
+  var millisTime = DateTime.now().millisecondsSinceEpoch;
+  var _ = DateFormat.yMd()
+      .add_jms()
+      .format(DateTime.fromMillisecondsSinceEpoch(millisTime));
+  log(_);
+}
 
-_button12(BuildContext context) async {}
+_button12(BuildContext context) async {
+  // month ago
+  var data_time = DateTime.now();
+  var _ = data_time.add(Duration(days: 30));
+  log(_);
+}
 
-_button13(BuildContext context) async {}
+_button13(BuildContext context) async {
+  // random date time inside one years
+  var dateTime = DateTime.now();
+  var _ = dateTime.add(Duration(days: -1 * Random().nextInt(365)));
+  log(_);
+}
 
-_button14(BuildContext context) async {}
+_button14(BuildContext context) async {
+  // random date time inside one months
+  var dateTime = DateTime.now();
+  var _ = dateTime.add(Duration(days: -1 * Random().nextInt(30)));
+  log(_);
+}
 
-_button15(BuildContext context) async {}
+_button15(BuildContext context) async {
+  // time pick change
+  var dateTime = DateTime.now();
+  var _ = DateTime(dateTime.year, dateTime.month, dateTime.day, 11, 11, 11);
+  log(_);
+}
 
-_button16(BuildContext context) async {}
+_button16(BuildContext context) async {
+  // after duration
+  var dateTime = DateTime.now();
+  var _ = DateTime(dateTime.year, dateTime.month, dateTime.day, 11, 11, 11);
+  log(_);
+}
 
-_button17(BuildContext context) async {}
+_button17(BuildContext context) async {
+  // after duration and pick time
+  var dateTime = DateTime.now();
+  var _ = dateTime.add(Duration(days: 1));
+  log(_);
+}
 
-_button18(BuildContext context) async {}
+_button18(BuildContext context) async {
+  // this week monday day
+  var d = DateTime.now();
+  var weekDay = d.weekday;
+  var _ = d.subtract(Duration(days: weekDay - 1));
+  log(_);
+}
 
-_button19(BuildContext context) async {}
+_button19(BuildContext context) async {
+  // this week days time object
+  List<DateTime> _list = [];
+  var d = DateTime.now();
+  var weekDay = d.weekday;
+  _list.add(d.subtract(Duration(days: weekDay - 1))); // monday
+  _list.add(d.subtract(Duration(days: weekDay - 2))); // tuesday
+  _list.add(d.subtract(Duration(days: weekDay - 3))); // wednesday
+  _list.add(d.subtract(Duration(days: weekDay - 4))); // thursday
+  _list.add(d.subtract(Duration(days: weekDay - 5))); // friday
+  _list.add(d.subtract(Duration(days: weekDay - 6))); // saturday
+  _list.add(d.subtract(Duration(days: weekDay - 7))); // sunday
+  log(_list);
+}
 
-_button20(BuildContext context) async {}
+_button20(BuildContext context) async {
+  // this week sunday day
+  var d = DateTime.now();
+  var weekDay = d.weekday;
+  var _ = d.subtract(Duration(days: weekDay - 7));
+  log(_);
+}
 
-_button21(BuildContext context) async {}
+_button21(BuildContext context) async {
+  // get week string
+  var dateTime = DateTime.now();
+  var weekDay = dateTime.weekday;
+  var _ = "";
+  if (weekDay == 1) {
+    _ = "mon";
+  } else if (weekDay == 2) {
+    _ = "tue";
+  } else if (weekDay == 3) {
+    _ = "wed";
+  } else if (weekDay == 4) {
+    _ = "thu";
+  } else if (weekDay == 5) {
+    _ = "fri";
+  } else if (weekDay == 6) {
+    _ = "sat";
+  } else if (weekDay == 7) {
+    _ = "sun";
+  }
+  log(_);
+}
 
-_button22(BuildContext context) async {}
+_button22(BuildContext context) async {
+}
 
 _button23(BuildContext context) async {}
 

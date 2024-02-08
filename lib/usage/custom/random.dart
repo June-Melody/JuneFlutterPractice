@@ -1,55 +1,152 @@
+import 'dart:convert';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
-import '../../../util/start_app.dart';
-import 'package:timeago/timeago.dart' as timeago;
+
+import '../../util/start_app.dart';
 
 _button00(BuildContext context) async {
-  // get ago
-  DateTime date = DateTime.now();
-  String? locale = "en";
-
-  String timeAgo = timeago.format(date, locale: locale);
+  // random color
+  var seed = 0;
+  var color = RandomColor(seed).randomColor();
+  log(color);
 }
 
-_button01(BuildContext context) async {}
+_button01(BuildContext context) async {
+  // random int
+  var maxSize = 100;
+  var int = Random().nextInt(maxSize);
+  log(int);
+}
 
-_button02(BuildContext context) async {}
+_button02(BuildContext context) async {
+  // random int between
+  var from = 10;
+  var to = 20;
+  var int = randomBetween(from, to);
+  log(int);
+}
 
-_button03(BuildContext context) async {}
+_button03(BuildContext context) async {
+  // random numeric
+  var numberCount = 4;
+  var numeric = randomNumeric(numberCount);
+  log(numeric);
+}
 
-_button04(BuildContext context) async {}
+_button04(BuildContext context) async {
+  // random string
+  var length = 20;
+  var string = randomString(length);
+  log(string);
+}
 
-_button05(BuildContext context) async {}
+_button05(BuildContext context) async {
+  // random key
+  var key = Key(randomString(20));
+  log(key);
+}
 
-_button06(BuildContext context) async {}
+_button06(BuildContext context) async {
+  // random string without number
+  var len = 20;
+  var r = Random();
+  const _chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz';
+  var stringWithoutNumber = List.generate(len, (index) => _chars[r.nextInt(_chars.length)])
+      .join();
+  log(stringWithoutNumber);
+}
 
-_button07(BuildContext context) async {}
+_button07(BuildContext context) async {
+  // random base64
+  var len = 20;
+  var random = Random.secure();
+  var values = List<int>.generate(len, (i) => random.nextInt(255));
+  var base64 = base64UrlEncode(values);
+  log(base64);
+}
 
-_button08(BuildContext context) async {}
+_button08(BuildContext context) async {
+}
 
-_button09(BuildContext context) async {}
+_button09(BuildContext context) async {
+}
 
-_button10(BuildContext context) async {}
+_button10(BuildContext context) async {
+  // random name
+  final faker = Faker.instance;
+  var name = faker.name.fullName();
+  log(name);
+}
 
-_button11(BuildContext context) async {}
+_button11(BuildContext context) async {
+  // random first name
+  final faker = Faker.instance;
+  var firstName = faker.name.firstName;
+  log(firstName);
+}
 
-_button12(BuildContext context) async {}
+_button12(BuildContext context) async {
+  // random last name
+  final faker = Faker.instance;
+  var lastName = faker.name.lastName();
+  log(lastName);
+}
 
-_button13(BuildContext context) async {}
+_button13(BuildContext context) async {
+  // random address
+  final faker = Faker.instance;
+  var address = faker.address.toString();
+  log(address);
+}
 
-_button14(BuildContext context) async {}
+_button14(BuildContext context) async {
+  // random animal
+  final faker = Faker.instance;
+  var animal = faker.animal.toString();
+  log(animal);
+}
 
-_button15(BuildContext context) async {}
+_button15(BuildContext context) async {
+  // random company
+  final faker = Faker.instance;
+  var company = faker.company.toString();
+  log(company);
+}
 
-_button16(BuildContext context) async {}
+_button16(BuildContext context) async {
+  // random hacker
+  final faker = Faker.instance;
+  var hacker = faker.hacker.toString();
+  log(hacker);
+}
 
-_button17(BuildContext context) async {}
+_button17(BuildContext context) async {
+  // random music
+  final faker = Faker.instance;
+  var music = faker.music.toString();
+  log(music);
+}
 
-_button18(BuildContext context) async {}
+_button18(BuildContext context) async {
+  // random hex
+  final faker = Faker.instance;
+  var hex = faker.datatype.hexaDecimal();
+  log(hex);
+}
 
-_button19(BuildContext context) async {}
+_button19(BuildContext context) async {
+  // random date time inside one years
+  var dateTime = DateTime.now().add(Duration(hours: -1 * Random().nextInt(24 * 365)));
+  log(dateTime);
+}
 
-_button20(BuildContext context) async {}
+_button20(BuildContext context) async {
+  // random date time inside one months
+  var dateTime = DateTime.now().add(Duration(hours: -1 * Random().nextInt(24 * 30)));
+  log(dateTime);
+}
 
 _button21(BuildContext context) async {}
 

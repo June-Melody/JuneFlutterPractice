@@ -1,58 +1,14 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_mailer/flutter_mailer.dart';
 
-import '../../../util/start_app.dart';
+import '../../util/start_app.dart';
+import 'package:timeago/timeago.dart' as timeago;
 
 _button00(BuildContext context) async {
-  // send email
-  String subject = "subject";
-  String body = "body";
-  String emailAddress = "emailAddress";
+  // get ago
+  DateTime date = DateTime.now();
+  String? locale = "en";
 
-  if (Platform.isIOS) {
-    final bool canSend = await FlutterMailer.canSendMail();
-    if (!canSend) {
-      // email is not configured. Please configure the email.
-      return;
-    }
-  }
-
-  final MailOptions mailOptions = MailOptions(
-    body: body,
-    subject: subject,
-    recipients: [emailAddress],
-    // isHTML: true,
-    // bccRecipients: ['other@example.com'],
-    // ccRecipients: ['third@example.com'],
-    // attachments: [
-    //   'path/to/image.png',
-    // ],
-  );
-
-  String platformResponse;
-  final MailerResponse response = await FlutterMailer.send(mailOptions);
-  switch (response) {
-    case MailerResponse.saved:
-      // ios only
-      platformResponse = 'mail was saved to draft';
-      break;
-    case MailerResponse.sent:
-      // ios only
-      platformResponse = 'mail was sent';
-      break;
-    case MailerResponse.cancelled:
-      // ios only
-      platformResponse = 'mail was cancelled';
-      break;
-    case MailerResponse.android:
-      platformResponse = 'intent was successful';
-      break;
-    default:
-      platformResponse = 'unknown';
-      break;
-  }
+  String timeAgo = timeago.format(date, locale: locale);
 }
 
 _button01(BuildContext context) async {}

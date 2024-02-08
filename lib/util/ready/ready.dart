@@ -14,6 +14,7 @@ import 'connectivity_plus/ready.dart';
 import 'country_code/ready.dart';
 import 'easy_localization/ready.dart';
 import 'get_storage/ready.dart';
+import 'google_mobile_ads/ready.dart';
 import 'hive/ready.dart';
 import 'logger/ready.dart';
 import 'my_app_version_change/ready.dart';
@@ -36,6 +37,8 @@ readyForRunAppStart() async {
 
   await readyForPackageInfo();
   await readyForTimeAgo();
+
+  await readyForGoogleMobileAds();
 
 
   // await readyObserver();
