@@ -18,17 +18,12 @@ class WorkSpacePage {
             child: ListView(
               children: [
                 Gap(20),
-                Text("Lego App")
+                Text("New App")
                     .textStyle(Theme.of(context).textTheme.displaySmall!)
                     .fontWeight(FontWeight.bold)
                     .center(),
                 Gap(20),
                 _button(context, "New Button", () {}),
-                InlineSizeAdaptiveBanner(
-                  width: 1.sw,
-                  maxHeight: 300,
-                  noBackgroundColor: false,
-                ),
               ],
             ),
           ),
