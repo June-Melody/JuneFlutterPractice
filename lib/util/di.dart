@@ -17,7 +17,7 @@ export 'params/my_package_info.dart';
 //
 // export '../kit/package/function/get_storage/_.dart';
 //
-// export '../kit/custom/widget/floating_button/_.dart';
+// export '../kit/custom/component/floating_button/_.dart';
 //
 // export '../kit/custom/function/block_touch/_.dart';
 //

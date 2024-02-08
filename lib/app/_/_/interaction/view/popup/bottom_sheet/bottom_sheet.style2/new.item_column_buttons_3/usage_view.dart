@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../../../../util/start_app.dart';
-import 'widget/_/util/view_skeleton.dart';
+import 'component/_/util/view_skeleton.dart';
 
 //////////////////////////////////////////////////////////////////////////////
 Future<Widget> _button00(BuildContext context) async {

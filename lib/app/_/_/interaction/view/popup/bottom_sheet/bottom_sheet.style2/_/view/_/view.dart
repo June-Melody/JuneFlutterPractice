@@ -4,12 +4,12 @@ import 'package:easy_localization/easy_localization.dart';
 
 import '../../../../../../../../../../../util/start_app.dart';
 import '../../../config.dart';
-import '../../../new.item_column_buttons_2/widget/_/util/view_skeleton.dart';
-import '../../../new.item_column_buttons_3/widget/_/util/view_skeleton.dart';
-import '../../../new.item_column_buttons_4/widget/_/util/view_skeleton.dart';
-import '../../../new.item_row_buttons_2/widget/_/util/view_skeleton.dart';
-import '../../../new.item_row_buttons_3/widget/_/util/view_skeleton.dart';
-import '../../../new.item_single_button/widget/_/util/view_skeleton.dart';
+import '../../../new.item_column_buttons_2/component/_/util/view_skeleton.dart';
+import '../../../new.item_column_buttons_3/component/_/util/view_skeleton.dart';
+import '../../../new.item_column_buttons_4/component/_/util/view_skeleton.dart';
+import '../../../new.item_row_buttons_2/component/_/util/view_skeleton.dart';
+import '../../../new.item_row_buttons_3/component/_/util/view_skeleton.dart';
+import '../../../new.item_single_button/component/_/util/view_skeleton.dart';
 import '../../vm/_/vm.dart';
 import 'config/params.dart';
 import 'util/view_skeleton.dart';

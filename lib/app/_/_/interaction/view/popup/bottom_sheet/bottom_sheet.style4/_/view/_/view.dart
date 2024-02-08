@@ -4,7 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_boxicons/flutter_boxicons.dart';
 
 import '../../../../../../../../../../../util/start_app.dart';
-import '../../../new_item/widget/_/util/view_skeleton.dart';
+import '../../../new_item/component/_/util/view_skeleton.dart';
 import '../../vm/_/vm.dart';
 import 'config/params.dart';
 import 'util/view_skeleton.dart';

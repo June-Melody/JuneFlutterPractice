@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 import '../../../../../../../../../../../util/start_app.dart';
-import '../../../item/widget/_/util/view_skeleton.dart';
+import '../../../item/component/_/util/view_skeleton.dart';
 import '../../vm/_/vm.dart';
 import 'config/params.dart';
 import 'util/view_skeleton.dart';
