@@ -7,9 +7,9 @@ import '../config/params.dart';
 import '../cycle/after_first_layout.dart';
 import '../cycle/dispose.dart';
 import '../cycle/init_state.dart';
-import '../cycle/on_ready.dart';
-import '../cycle/on_resume.dart';
-import '../cycle/on_stop.dart';
+
+
+
 import '../cycle/ready_view.dart';
 import '../view.dart';
 
@@ -69,22 +69,7 @@ class _ViewState extends State<NewViewDoNotPutViewAsWidget>
     super.initState();
   }
 
-  @override
-  void onReady() {
-    currentPageName = 'New';
-    NewViewOnReady();
-  }
-
-  @override
-  void onResume() {
-    currentPageName = 'New';
-    NewViewOnResume();
-  }
-
-  @override
-  void onPause() {
-    NewViewOnStop();
-  }
+  
 
   bool isDisposed = false;
 
@@ -105,7 +90,7 @@ class _ViewState extends State<NewViewDoNotPutViewAsWidget>
     NewParams params,
     BuildContext context,
   ) async {
-    if (isReadyView) return; // 이미 실행된 경우 종료
+    if (isReadyView) return; // If it's already running, terminate it.
     params.context = context;
     await readyView(params, context, widget.tag);
 

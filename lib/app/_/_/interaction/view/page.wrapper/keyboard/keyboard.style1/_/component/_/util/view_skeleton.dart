@@ -7,9 +7,9 @@ import '../config/params.dart';
 import '../cycle/after_first_layout.dart';
 import '../cycle/dispose.dart';
 import '../cycle/init_state.dart';
-import '../cycle/on_ready.dart';
-import '../cycle/on_resume.dart';
-import '../cycle/on_stop.dart';
+
+
+
 import '../cycle/ready_view.dart';
 import '../view.dart';
 
@@ -68,22 +68,7 @@ class _ViewState extends State<NewView> with AfterLayoutMixin<NewView> {
     super.initState();
   }
 
-  @override
-  void onReady() {
-    currentPageName = 'New';
-    NewViewOnReady();
-  }
-
-  @override
-  void onResume() {
-    currentPageName = 'New';
-    NewViewOnResume();
-  }
-
-  @override
-  void onPause() {
-    NewViewOnStop();
-  }
+  
 
   bool isDisposed = false;
 

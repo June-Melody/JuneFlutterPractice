@@ -19,7 +19,6 @@ export 'params/my_package_info.dart';
 // export '../kit/custom/function/block_touch/_.dart';
 //
 // export '../kit/package/function/logger/_.dart';
-export 'params/current_page.dart';
 
 export 'params/event_bus.dart';
 

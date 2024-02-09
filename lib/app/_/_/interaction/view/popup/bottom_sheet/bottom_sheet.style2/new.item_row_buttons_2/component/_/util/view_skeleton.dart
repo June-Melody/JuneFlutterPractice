@@ -7,9 +7,9 @@ import '../config/params.dart';
 import '../cycle/after_first_layout.dart';
 import '../cycle/dispose.dart';
 import '../cycle/init_state.dart';
-import '../cycle/on_ready.dart';
-import '../cycle/on_resume.dart';
-import '../cycle/on_stop.dart';
+
+
+
 import '../cycle/ready_view.dart';
 import '../view.dart';
 
@@ -67,23 +67,6 @@ class _ViewState extends State<NewItemRowButton2View>
     }
     NewItemRowButton2ViewInitState(widget.params, widget.params.context);
     super.initState();
-  }
-
-  @override
-  void onReady() {
-    currentPageName = 'NewItemRowButton2';
-    NewItemRowButton2ViewOnReady();
-  }
-
-  @override
-  void onResume() {
-    currentPageName = 'NewItemRowButton2';
-    NewItemRowButton2ViewOnResume();
-  }
-
-  @override
-  void onPause() {
-    NewItemRowButton2ViewOnStop();
   }
 
   bool isDisposed = false;

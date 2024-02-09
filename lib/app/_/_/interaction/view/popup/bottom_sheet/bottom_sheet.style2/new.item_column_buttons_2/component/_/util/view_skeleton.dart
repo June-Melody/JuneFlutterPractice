@@ -7,9 +7,9 @@ import '../config/params.dart';
 import '../cycle/after_first_layout.dart';
 import '../cycle/dispose.dart';
 import '../cycle/init_state.dart';
-import '../cycle/on_ready.dart';
-import '../cycle/on_resume.dart';
-import '../cycle/on_stop.dart';
+
+
+
 import '../cycle/ready_view.dart';
 import '../view.dart';
 
@@ -69,24 +69,6 @@ class _ViewState extends State<NewItemColumnButton2View>
     NewItemColumnButton2ViewInitState(widget.params, widget.params.context);
     super.initState();
   }
-
-  @override
-  void onReady() {
-    currentPageName = 'NewItemColumnButton2';
-    NewItemColumnButton2ViewOnReady();
-  }
-
-  @override
-  void onResume() {
-    currentPageName = 'NewItemColumnButton2';
-    NewItemColumnButton2ViewOnResume();
-  }
-
-  @override
-  void onPause() {
-    NewItemColumnButton2ViewOnStop();
-  }
-
   bool isDisposed = false;
 
   @override
