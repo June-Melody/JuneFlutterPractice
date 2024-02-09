@@ -30,9 +30,8 @@ class _VState extends State<V> {
       builder: (vmNew) => Scaffold(
         bottomNavigationBar: Theme(
           data: Theme.of(context).copyWith(
-            splashColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-          ),
+              splashColor: Colors.transparent,
+              highlightColor: Colors.transparent),
           child: BottomNavigationBar(
             showSelectedLabels: false,
             showUnselectedLabels: false,
@@ -89,23 +88,14 @@ class _VState extends State<V> {
             ],
           ),
         ),
-        body: IndexedStack(
-          index: _selectedIndex,
-          children: [
-            //////////////////////////////////////////////////////////////////
-            Container().backgroundColor(Colors.red),
-            Container().backgroundColor(Colors.blue),
-            Container().backgroundColor(Colors.yellow),
-            Container().backgroundColor(Colors.green),
-            //////////////////////////////////////////////////////////////////
-          ],
-        ),
-        floatingActionButton: FloatingActionButtonKit(
-          button1: (context) {
-            _selectedIndex = (_selectedIndex + 1) % 4;
-            setState(() {});
-          },
-        ),
+        body: <Widget>[
+          //////////////////////////////////////////////////////////////////
+          Container().backgroundColor(Colors.red),
+          Container().backgroundColor(Colors.blue),
+          Container().backgroundColor(Colors.yellow),
+          Container().backgroundColor(Colors.green),
+          //////////////////////////////////////////////////////////////////
+        ].elementAt(_selectedIndex),
       ),
     );
   }
