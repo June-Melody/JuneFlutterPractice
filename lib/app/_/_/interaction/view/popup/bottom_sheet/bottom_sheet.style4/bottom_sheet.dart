@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../../../util/start_app.dart';
-import '_/component/_/util/view_skeleton.dart';
+import '_/component/util/view_skeleton.dart';
 
 void NewBottomSheet(
     BuildContext context, void Function(BuildContext) onTap) async {

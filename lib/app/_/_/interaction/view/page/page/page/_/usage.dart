@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../../../../util/start_app.dart';
-import 'page/_/util/navigator.dart';
+import 'page/util/navigator.dart';
 
 _button00(BuildContext context) async {
   NewNavigator(NewParams(), tag: "someTag").movePage(context);
