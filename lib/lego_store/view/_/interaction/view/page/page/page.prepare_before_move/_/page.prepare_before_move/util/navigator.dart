@@ -30,6 +30,7 @@ class NewNavigator {
       return;
     }
     context.loaderOverlay.hide();
+
     Get.to(
         () => NewViewDoNotPutViewAsWidget(
               params: params,
