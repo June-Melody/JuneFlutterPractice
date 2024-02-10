@@ -13,10 +13,10 @@ import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
 import '../../../../../main.dart';
+import '../app/_/_/interaction/view/_/_/init_view.dart';
 import '../util/params/app_cycle.dart';
 import '../app/_/_/interaction/listener/_/app_life_cycle/turn_background.dart';
 import '../app/_/_/interaction/listener/_/app_life_cycle/turn_foreground.dart';
-import '../app/_/_/interaction/view/_/workspace.dart';
 import 'config/screen_rotate.dart';
 import 'config/support_language.dart';
 import 'config/theme/_config.dart';
@@ -127,7 +127,7 @@ class _ViewState extends State<_ReadyPage> with AfterLayoutMixin<_ReadyPage> {
   dynamic _ready() async {
     await readyForAppStart(context);
 
-    streamController.add(await WorkSpacePage()(context));
+    streamController.add(await InitView()(context));
     // return true;
   }
 

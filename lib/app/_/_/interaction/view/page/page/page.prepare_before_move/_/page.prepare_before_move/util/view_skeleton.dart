@@ -15,8 +15,8 @@ import '../view.dart';
 
 export '../config/params.dart';
 
-class NewView extends StatefulWidget {
-  NewView({
+class NewViewDoNotPutViewAsWidget extends StatefulWidget {
+  NewViewDoNotPutViewAsWidget({
     super.key,
     this.heroKey,
     this.tag,
@@ -35,7 +35,8 @@ class NewView extends StatefulWidget {
   _ViewState createState() => _ViewState();
 }
 
-class _ViewState extends State<NewView> with AfterLayoutMixin<NewView> {
+class _ViewState extends State<NewViewDoNotPutViewAsWidget>
+    with AfterLayoutMixin<NewViewDoNotPutViewAsWidget> {
   bool isReadyView = false;
 
   @override

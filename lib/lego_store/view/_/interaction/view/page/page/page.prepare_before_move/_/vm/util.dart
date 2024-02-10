@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../../../../../../../../../../../util/start_app.dart';
-import '../page.loading_view_ready/config/params.dart';
+import '../page.prepare_before_move/config/params.dart';
 import 'cycle/delete.dart';
 import 'cycle/init.dart';
 import 'vm.dart';

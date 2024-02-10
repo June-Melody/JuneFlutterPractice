@@ -4,7 +4,8 @@ import '../../../../../../../../../util/start_app.dart';
 import 'page/util/navigator.dart';
 
 _button00(BuildContext context) async {
-  NewNavigator(NewParams(), tag: "someTag").movePage(context);
+  NewNavigator(NewParams(), tag: "someTag")
+      .movePageOffAllWithLoadingView(context);
 }
 
 _button01(BuildContext context) async {}
