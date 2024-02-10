@@ -4,5 +4,8 @@ This document is for entering the registration information of the view Lego. Ple
 # screenshot
 Please insert the image URL here.
 
+# Dependency Lego
+If there are any utility Legos that need to be installed beforehand to run this view, please provide the links to those Legos.
+
 # Type
 BottomNavigation
