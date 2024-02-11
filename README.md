@@ -1,6 +1,6 @@
-# lego-flutter
+# JuneFlut
 
-lego-flutter is a Flutter architecture that greatly enhances productivity for app development. It's
+JuneFlut is a Flutter architecture that greatly enhances productivity for app development. It's
 also designed to easily create and add various legos (code blocks) just like assembling Lego pieces.
 
 ## Get Started
