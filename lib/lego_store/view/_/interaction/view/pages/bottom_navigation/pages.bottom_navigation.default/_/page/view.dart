@@ -103,8 +103,10 @@ class _VState extends State<V> {
 
 main() async {
   return await startApp(callAfterBuild: (context) async {
-    NewNavigator(NewParams(), tag: "someTag")
-        .movePage(context, transition: Transition.fadeIn);
+    NewNavigator(
+      NewParams(),
+      // tag: "someTag"
+    ).movePage(context, transition: Transition.fadeIn);
     // NewNavigator(NewParams(), tag: "someTag").movePageOffAllWithLoadingView(context);
   });
 }

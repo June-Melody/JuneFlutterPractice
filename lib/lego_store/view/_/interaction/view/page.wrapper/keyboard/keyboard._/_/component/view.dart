@@ -40,7 +40,7 @@ main() async {
   return await startApp(
       home: SafeArea(
     child: NewView(
-      tag: "someTag",
+      // tag: "someTag",
       params: NewParams(),
     ),
   ));

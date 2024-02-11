@@ -17,8 +17,7 @@ class NewNavigator {
   }
 
   // page move without delay (hero animation not available)
-  movePageWithLoadingView(BuildContext context,
-      {Transition? transition}) {
+  movePageWithLoadingView(BuildContext context, {Transition? transition}) {
     params.context = context;
     Get.to(
         () => NewView(
@@ -28,8 +27,7 @@ class NewNavigator {
         transition: transition ?? Transition.rightToLeft);
   }
 
-  movePageOffWithLoadingView(BuildContext context,
-      {Transition? transition}) {
+  movePageOffWithLoadingView(BuildContext context, {Transition? transition}) {
     params.context = context;
     Get.off(
         () => NewView(

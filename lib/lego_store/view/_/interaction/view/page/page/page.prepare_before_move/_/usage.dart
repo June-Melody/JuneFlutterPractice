@@ -4,7 +4,10 @@ import '../../../../../../../../../util/start_app.dart';
 import 'page.prepare_before_move/util/navigator.dart';
 
 _button00(BuildContext context) async {
-  NewNavigator(NewParams(), tag: "someTag").movePage(context);
+  NewNavigator(
+    NewParams(),
+    // tag: "someTag"
+  ).movePage(context);
 }
 
 _button01(BuildContext context) async {}

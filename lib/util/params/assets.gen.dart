@@ -13,7 +13,8 @@ class $AssetsLauncherIconsGen {
   const $AssetsLauncherIconsGen();
 
   /// File path: assets/launcher_icons/android.png
-  AssetGenImage get android => const AssetGenImage('assets/launcher_icons/android.png');
+  AssetGenImage get android =>
+      const AssetGenImage('assets/launcher_icons/android.png');
 
   /// File path: assets/launcher_icons/ios.png
   AssetGenImage get ios => const AssetGenImage('assets/launcher_icons/ios.png');
@@ -26,8 +27,11 @@ class $AssetsLegoStoreGen {
   const $AssetsLegoStoreGen();
 
   $AssetsLegoStoreIlluGen get illu => const $AssetsLegoStoreIlluGen();
+
   $AssetsLegoStoreImageGen get image => const $AssetsLegoStoreImageGen();
+
   $AssetsLegoStoreLottieGen get lottie => const $AssetsLegoStoreLottieGen();
+
   $AssetsLegoStoreSvgIconGen get svg => const $AssetsLegoStoreSvgIconGen();
 }
 
@@ -45,56 +49,71 @@ class $AssetsLegoStoreIlluGen {
   const $AssetsLegoStoreIlluGen();
 
   /// File path: assets/lego_store/illu/bank.png
-  AssetGenImage get bank => const AssetGenImage('assets/lego_store/illu/bank.png');
+  AssetGenImage get bank =>
+      const AssetGenImage('assets/lego_store/illu/bank.png');
 
   /// File path: assets/lego_store/illu/hospital.png
-  AssetGenImage get hospital => const AssetGenImage('assets/lego_store/illu/hospital.png');
+  AssetGenImage get hospital =>
+      const AssetGenImage('assets/lego_store/illu/hospital.png');
 
   /// File path: assets/lego_store/illu/kitekat.png
-  AssetGenImage get kitekat => const AssetGenImage('assets/lego_store/illu/kitekat.png');
+  AssetGenImage get kitekat =>
+      const AssetGenImage('assets/lego_store/illu/kitekat.png');
 
   /// File path: assets/lego_store/illu/money.png
-  AssetGenImage get money => const AssetGenImage('assets/lego_store/illu/money.png');
+  AssetGenImage get money =>
+      const AssetGenImage('assets/lego_store/illu/money.png');
 
   /// File path: assets/lego_store/illu/money2.png
-  AssetGenImage get money2 => const AssetGenImage('assets/lego_store/illu/money2.png');
+  AssetGenImage get money2 =>
+      const AssetGenImage('assets/lego_store/illu/money2.png');
 
   /// File path: assets/lego_store/illu/money3.png
-  AssetGenImage get money3 => const AssetGenImage('assets/lego_store/illu/money3.png');
+  AssetGenImage get money3 =>
+      const AssetGenImage('assets/lego_store/illu/money3.png');
 
   /// File path: assets/lego_store/illu/money4.png
-  AssetGenImage get money4 => const AssetGenImage('assets/lego_store/illu/money4.png');
+  AssetGenImage get money4 =>
+      const AssetGenImage('assets/lego_store/illu/money4.png');
 
   /// File path: assets/lego_store/illu/stock.png
-  AssetGenImage get stock => const AssetGenImage('assets/lego_store/illu/stock.png');
+  AssetGenImage get stock =>
+      const AssetGenImage('assets/lego_store/illu/stock.png');
 
   /// File path: assets/lego_store/illu/vaccine.png
-  AssetGenImage get vaccine => const AssetGenImage('assets/lego_store/illu/vaccine.png');
+  AssetGenImage get vaccine =>
+      const AssetGenImage('assets/lego_store/illu/vaccine.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [bank, hospital, kitekat, money, money2, money3, money4, stock, vaccine];
+  List<AssetGenImage> get values =>
+      [bank, hospital, kitekat, money, money2, money3, money4, stock, vaccine];
 }
 
 class $AssetsLegoStoreImageGen {
   const $AssetsLegoStoreImageGen();
 
   /// File path: assets/lego_store/image/flower.png
-  AssetGenImage get flower => const AssetGenImage('assets/lego_store/image/flower.png');
+  AssetGenImage get flower =>
+      const AssetGenImage('assets/lego_store/image/flower.png');
 
   /// File path: assets/lego_store/image/iu.jpg
   AssetGenImage get iu => const AssetGenImage('assets/lego_store/image/iu.jpg');
 
   /// File path: assets/lego_store/image/location_permission_background.jpeg
-  AssetGenImage get locationPermissionBackground => const AssetGenImage('assets/lego_store/image/location_permission_background.jpeg');
+  AssetGenImage get locationPermissionBackground => const AssetGenImage(
+      'assets/lego_store/image/location_permission_background.jpeg');
 
   /// File path: assets/lego_store/image/no_connection.png
-  AssetGenImage get noConnection => const AssetGenImage('assets/lego_store/image/no_connection.png');
+  AssetGenImage get noConnection =>
+      const AssetGenImage('assets/lego_store/image/no_connection.png');
 
   /// File path: assets/lego_store/image/share.png
-  AssetGenImage get share => const AssetGenImage('assets/lego_store/image/share.png');
+  AssetGenImage get share =>
+      const AssetGenImage('assets/lego_store/image/share.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [flower, iu, locationPermissionBackground, noConnection, share];
+  List<AssetGenImage> get values =>
+      [flower, iu, locationPermissionBackground, noConnection, share];
 }
 
 class $AssetsLegoStoreLottieGen {
@@ -117,7 +136,8 @@ class $AssetsLegoStoreSvgIconGen {
   String get copy => 'assets/lego_store/svg.icon/Copy.svg';
 
   /// File path: assets/lego_store/svg.icon/Profile Delete 2.svg
-  String get profileDelete2 => 'assets/lego_store/svg.icon/Profile Delete 2.svg';
+  String get profileDelete2 =>
+      'assets/lego_store/svg.icon/Profile Delete 2.svg';
 
   /// File path: assets/lego_store/svg.icon/add.svg
   String get add => 'assets/lego_store/svg.icon/add.svg';
@@ -368,7 +388,8 @@ class $AssetsLegoStoreSvgIconGen {
   /// File path: assets/lego_store/svg.icon/home_fill.svg
   String get homeFill => 'assets/lego_store/svg.icon/home_fill.svg';
 
-  $AssetsLegoStoreSvgIconInstagramGen get instagram => const $AssetsLegoStoreSvgIconInstagramGen();
+  $AssetsLegoStoreSvgIconInstagramGen get instagram =>
+      const $AssetsLegoStoreSvgIconInstagramGen();
 
   /// File path: assets/lego_store/svg.icon/kakao.svg
   String get kakao => 'assets/lego_store/svg.icon/kakao.svg';
@@ -419,7 +440,8 @@ class $AssetsLegoStoreSvgIconGen {
   String get nextButton => 'assets/lego_store/svg.icon/next_button.svg';
 
   /// File path: assets/lego_store/svg.icon/next_button_dark.svg
-  String get nextButtonDark => 'assets/lego_store/svg.icon/next_button_dark.svg';
+  String get nextButtonDark =>
+      'assets/lego_store/svg.icon/next_button_dark.svg';
 
   /// File path: assets/lego_store/svg.icon/overlap.svg
   String get overlap => 'assets/lego_store/svg.icon/overlap.svg';
@@ -717,13 +739,38 @@ class $AssetsLegoStoreSvgIconInstagramGen {
   String get user => 'assets/lego_store/svg.icon/instagram/user.svg';
 
   /// List of all assets
-  List<String> get values => [add, bookmark, camera, chat, close, compass, download, eye, follow, follower, gallery, gear, history, home, igtv, instagram, like, search, send, timeline, trash, upload, user];
+  List<String> get values => [
+        add,
+        bookmark,
+        camera,
+        chat,
+        close,
+        compass,
+        download,
+        eye,
+        follow,
+        follower,
+        gallery,
+        gear,
+        history,
+        home,
+        igtv,
+        instagram,
+        like,
+        search,
+        send,
+        timeline,
+        trash,
+        upload,
+        user
+      ];
 }
 
 class Assets {
   Assets._();
 
-  static const $AssetsLauncherIconsGen launcherIcons = $AssetsLauncherIconsGen();
+  static const $AssetsLauncherIconsGen launcherIcons =
+      $AssetsLauncherIconsGen();
   static const $AssetsLegoStoreGen legoStore = $AssetsLegoStoreGen();
   static const String localization = 'assets/localization.csv';
   static const $AssetsSplashGen splash = $AssetsSplashGen();

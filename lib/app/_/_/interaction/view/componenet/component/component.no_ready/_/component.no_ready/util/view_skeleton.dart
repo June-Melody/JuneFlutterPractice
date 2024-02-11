@@ -7,8 +7,6 @@ import '../cycle/after_first_layout.dart';
 import '../cycle/dispose.dart';
 import '../cycle/init_state.dart';
 
-
-
 import '../view.dart';
 
 export '../config/params.dart';
@@ -51,8 +49,6 @@ class _ViewState extends State<NewView> with AfterLayoutMixin<NewView> {
     NewViewInitState(widget.params);
     super.initState();
   }
-
-  
 
   bool isDisposed = false;
 

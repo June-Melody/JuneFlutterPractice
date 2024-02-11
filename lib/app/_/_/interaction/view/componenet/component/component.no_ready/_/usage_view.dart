@@ -7,7 +7,7 @@ import 'component.no_ready/util/view_skeleton.dart';
 Future<Widget> _button00(BuildContext context) async {
   return NewView(
     params: NewParams(),
-    tag: "someTag",
+    // tag: "someTag",
   );
 }
 
