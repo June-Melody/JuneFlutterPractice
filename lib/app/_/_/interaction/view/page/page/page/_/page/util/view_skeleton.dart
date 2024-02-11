@@ -18,7 +18,6 @@ export '../config/params.dart';
 class NewView extends StatefulWidget {
   NewView({
     super.key,
-    this.heroKey,
     this.tag,
     this.readyDone = false,
     required this.params,
@@ -27,7 +26,6 @@ class NewView extends StatefulWidget {
   }
 
   final NewParams params;
-  final Key? heroKey;
   final bool readyDone;
   final String? tag;
 
@@ -46,7 +44,6 @@ class _ViewState extends State<NewView> with AfterLayoutMixin<NewView> {
             tag: widget.tag,
           )
         : V(
-            heroKey: widget.heroKey,
             params: widget.params,
             tag: widget.tag,
           );

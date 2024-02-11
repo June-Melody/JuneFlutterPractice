@@ -9,9 +9,8 @@ import 'util/navigator.dart';
 import 'util/view_skeleton.dart';
 
 class V extends StatefulWidget {
-  const V({super.key, this.heroKey, this.tag, required this.params});
+  const V({super.key, this.tag, required this.params});
 
-  final Key? heroKey;
   final String? tag;
   final NewParams params;
 
