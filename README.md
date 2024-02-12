@@ -5,11 +5,8 @@
   JuneFlut
 </h1>
 <p align="center">
-  An application build pattern for Flutter<br>
+  An application build pattern for Flutter<br>
 
-  <a href="https://github.com/melodysdreamj/JuneFlut/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
-  </a>
 </p>
 
 ## Get Started
