@@ -25,7 +25,7 @@ flutter run
 
 ## Documentation
 
-Lego Flutter has a clear method of use overall, related to making apps, including UI, backend, and
+JuneFlutter has a clear method of use overall, related to making apps, including UI, backend, and
 adding features. Please refer
 to [the document](https://flutter.junes-architecture.lol/getting-started) to create your app!
 
