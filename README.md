@@ -5,7 +5,7 @@
   JuneFlut
 </h1>
 <p align="center">
-  An application build pattern for Flutter<br>
+  An application build pattern for Flutter Mobile<br>
 
 </p>
 
