@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/melodysdreamj/JuneFlut/assets/21379657/15a3ea80-d0a6-40f5-9b07-e5ae0dc2cf87" alt="logo" width="20%" />
+  <img src="https://raw.githubusercontent.com/melodysdreamj/JuneFlutter/document/logo.png" alt="logo" width="25%" />
 </p>
 <h1 align="center">
   JuneFlutter
@@ -31,7 +31,7 @@ to [the document](https://flutter.junes-architecture.lol/getting-started) to cre
 
 ## Views
 JuneFlutter allows you to instantly use and easily modify numerous views (pages, components, bottom sheets, dialogs, etc.) in your project by copying and pasting the same structure.
-Check out the views available [here](https://juneflut-views.junestory.com/).
+Check out the views available [here](https://juneflutter-views.junes-architecture.lol).
 
 ## Extension
 JuneFlutter allows you to easily add numerous features based on the same architecture. Below is a list of the current extensions available.
