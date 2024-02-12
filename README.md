@@ -1,7 +1,16 @@
-# JuneFlut
+<p align="center">
+  <img src="https://github.com/melodysdreamj/JuneFlut/assets/21379657/15a3ea80-d0a6-40f5-9b07-e5ae0dc2cf87" alt="logo" width="20%" />
+</p>
+<h1 align="center">
+  JuneFlut
+</h1>
+<p align="center">
+  An application architecture for Flutter<br>
 
-JuneFlut is a Flutter architecture that greatly enhances productivity for app development. It's
-also designed to easily create and add various legos (code blocks) just like assembling Lego pieces.
+  <a href="https://github.com/facebook/flux/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
+  </a>
+</p>
 
 ## Get Started
 
