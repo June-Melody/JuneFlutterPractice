@@ -34,6 +34,9 @@ JuneFlut allows you to instantly use and easily modify numerous views (pages, co
 Check out the views available [here](https://juneflut-views.junestory.com/).
 
 ## Extension
+JuneFlut allows you to easily add numerous features based on the same architecture. Below is a list of the current extensions available.
 
-
+| Name | Description | Maintainer |
+| --- | --- | --- |
+| [**android_alarm_manager_plus**](https://github.com/fluttercommunity/android_alarm_manager_plus) (https://pub.dartlang.org/packages/android_alarm_manager_plus) | Flutter plugin for accessing the Android AlarmManager service, and running Dart code in the background when alarms fire. | [Miguel Beltran](https://github.com/miquelbeltran)
 
