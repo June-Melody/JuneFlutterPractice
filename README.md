@@ -30,11 +30,11 @@ adding features. Please refer
 to [the document](https://flutter.junes-architecture.lol/getting-started) to create your app!
 
 ## Views
-JuneFlut allows you to instantly use and easily modify numerous views (pages, components, bottom sheets, dialogs, etc.) in your project by copying and pasting the same structure.
+JuneFlutter allows you to instantly use and easily modify numerous views (pages, components, bottom sheets, dialogs, etc.) in your project by copying and pasting the same structure.
 Check out the views available [here](https://juneflut-views.junestory.com/).
 
 ## Extension
-JuneFlut allows you to easily add numerous features based on the same architecture. Below is a list of the current extensions available.
+JuneFlutter allows you to easily add numerous features based on the same architecture. Below is a list of the current extensions available.
 
 | Name | Description | Maintainer |
 | --- | --- | --- |
