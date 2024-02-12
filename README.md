@@ -2,7 +2,7 @@
   <img src="https://github.com/melodysdreamj/JuneFlut/assets/21379657/15a3ea80-d0a6-40f5-9b07-e5ae0dc2cf87" alt="logo" width="20%" />
 </p>
 <h1 align="center">
-  JuneFlut
+  JuneFlutter
 </h1>
 <p align="center">
   An application development pattern for Flutter Mobile<br>
