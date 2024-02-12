@@ -38,5 +38,5 @@ JuneFlut allows you to easily add numerous features based on the same architectu
 
 | Name | Description | Maintainer |
 | --- | --- | --- |
-| [**android_alarm_manager_plus**](https://github.com/fluttercommunity/android_alarm_manager_plus) (https://pub.dartlang.org/packages/android_alarm_manager_plus) | Flutter plugin for accessing the Android AlarmManager service, and running Dart code in the background when alarms fire. | [Miguel Beltran](https://github.com/miquelbeltran)
+| [**pocketbase**](https://github.com/melodysdreamj/pocketbase-extension)| pocketbase-extension | [melodysdreamj](https://github.com/melodysdreamj)
 
