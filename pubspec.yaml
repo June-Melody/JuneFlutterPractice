@@ -133,11 +133,11 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
-    - assets/lego_store/image/
-    - assets/lego_store/illu/
-    - assets/lego_store/lottie/
-    - assets/lego_store/svg.icon/
-    - assets/lego_store/svg.icon/instagram/
+    - assets/prepare_asset/image/
+    - assets/prepare_asset/illu/
+    - assets/prepare_asset/lottie/
+    - assets/prepare_asset/svg.icon/
+    - assets/prepare_asset/svg.icon/instagram/
     - assets/launcher_icons/
     - assets/splash/
     - assets/localization.csv

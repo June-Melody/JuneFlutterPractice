@@ -12,7 +12,7 @@ class InitView {
             child: ListView(
               children: [
                 Gap(20),
-                Text("Lego App")
+                Text("New App")
                     .textStyle(Theme.of(context).textTheme.displaySmall!)
                     .fontWeight(FontWeight.bold)
                     .center(),
