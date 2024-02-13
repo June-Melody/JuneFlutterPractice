@@ -17,7 +17,7 @@ Please insert the contributor's github id here.
 
 # description
 
-Please write a brief description of the vieLego here.
+Please write a brief description of the view here.
 
 # tag
 
