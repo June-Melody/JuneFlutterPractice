@@ -29,7 +29,7 @@ JuneFlutter has a clear method of use overall, related to making apps, including
 adding features. Please refer
 to [the document](https://flutter.junes-architecture.lol/getting-started) to create your app!
 
-## Views
+## Share Views
 JuneFlutter allows you to instantly use and easily modify numerous views (pages, components, bottom sheets, dialogs, etc.) in your project by copying and pasting the same structure.
 Check out the views available [here](https://juneflutter-views.junes-architecture.lol).
 
