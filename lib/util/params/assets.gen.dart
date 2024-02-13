@@ -13,7 +13,8 @@ class $AssetsLauncherIconsGen {
   const $AssetsLauncherIconsGen();
 
   /// File path: assets/launcher_icons/android.png
-  AssetGenImage get android => const AssetGenImage('assets/launcher_icons/android.png');
+  AssetGenImage get android =>
+      const AssetGenImage('assets/launcher_icons/android.png');
 
   /// File path: assets/launcher_icons/ios.png
   AssetGenImage get ios => const AssetGenImage('assets/launcher_icons/ios.png');
@@ -26,9 +27,14 @@ class $AssetsPrepareAssetGen {
   const $AssetsPrepareAssetGen();
 
   $AssetsPrepareAssetIlluGen get illu => const $AssetsPrepareAssetIlluGen();
+
   $AssetsPrepareAssetImageGen get image => const $AssetsPrepareAssetImageGen();
-  $AssetsPrepareAssetLottieGen get lottie => const $AssetsPrepareAssetLottieGen();
-  $AssetsPrepareAssetSvgIconGen get svg => const $AssetsPrepareAssetSvgIconGen();
+
+  $AssetsPrepareAssetLottieGen get lottie =>
+      const $AssetsPrepareAssetLottieGen();
+
+  $AssetsPrepareAssetSvgIconGen get svg =>
+      const $AssetsPrepareAssetSvgIconGen();
 }
 
 class $AssetsSplashGen {
@@ -45,56 +51,72 @@ class $AssetsPrepareAssetIlluGen {
   const $AssetsPrepareAssetIlluGen();
 
   /// File path: assets/prepare_asset/illu/bank.png
-  AssetGenImage get bank => const AssetGenImage('assets/prepare_asset/illu/bank.png');
+  AssetGenImage get bank =>
+      const AssetGenImage('assets/prepare_asset/illu/bank.png');
 
   /// File path: assets/prepare_asset/illu/hospital.png
-  AssetGenImage get hospital => const AssetGenImage('assets/prepare_asset/illu/hospital.png');
+  AssetGenImage get hospital =>
+      const AssetGenImage('assets/prepare_asset/illu/hospital.png');
 
   /// File path: assets/prepare_asset/illu/kitekat.png
-  AssetGenImage get kitekat => const AssetGenImage('assets/prepare_asset/illu/kitekat.png');
+  AssetGenImage get kitekat =>
+      const AssetGenImage('assets/prepare_asset/illu/kitekat.png');
 
   /// File path: assets/prepare_asset/illu/money.png
-  AssetGenImage get money => const AssetGenImage('assets/prepare_asset/illu/money.png');
+  AssetGenImage get money =>
+      const AssetGenImage('assets/prepare_asset/illu/money.png');
 
   /// File path: assets/prepare_asset/illu/money2.png
-  AssetGenImage get money2 => const AssetGenImage('assets/prepare_asset/illu/money2.png');
+  AssetGenImage get money2 =>
+      const AssetGenImage('assets/prepare_asset/illu/money2.png');
 
   /// File path: assets/prepare_asset/illu/money3.png
-  AssetGenImage get money3 => const AssetGenImage('assets/prepare_asset/illu/money3.png');
+  AssetGenImage get money3 =>
+      const AssetGenImage('assets/prepare_asset/illu/money3.png');
 
   /// File path: assets/prepare_asset/illu/money4.png
-  AssetGenImage get money4 => const AssetGenImage('assets/prepare_asset/illu/money4.png');
+  AssetGenImage get money4 =>
+      const AssetGenImage('assets/prepare_asset/illu/money4.png');
 
   /// File path: assets/prepare_asset/illu/stock.png
-  AssetGenImage get stock => const AssetGenImage('assets/prepare_asset/illu/stock.png');
+  AssetGenImage get stock =>
+      const AssetGenImage('assets/prepare_asset/illu/stock.png');
 
   /// File path: assets/prepare_asset/illu/vaccine.png
-  AssetGenImage get vaccine => const AssetGenImage('assets/prepare_asset/illu/vaccine.png');
+  AssetGenImage get vaccine =>
+      const AssetGenImage('assets/prepare_asset/illu/vaccine.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [bank, hospital, kitekat, money, money2, money3, money4, stock, vaccine];
+  List<AssetGenImage> get values =>
+      [bank, hospital, kitekat, money, money2, money3, money4, stock, vaccine];
 }
 
 class $AssetsPrepareAssetImageGen {
   const $AssetsPrepareAssetImageGen();
 
   /// File path: assets/prepare_asset/image/flower.png
-  AssetGenImage get flower => const AssetGenImage('assets/prepare_asset/image/flower.png');
+  AssetGenImage get flower =>
+      const AssetGenImage('assets/prepare_asset/image/flower.png');
 
   /// File path: assets/prepare_asset/image/iu.jpg
-  AssetGenImage get iu => const AssetGenImage('assets/prepare_asset/image/iu.jpg');
+  AssetGenImage get iu =>
+      const AssetGenImage('assets/prepare_asset/image/iu.jpg');
 
   /// File path: assets/prepare_asset/image/location_permission_background.jpeg
-  AssetGenImage get locationPermissionBackground => const AssetGenImage('assets/prepare_asset/image/location_permission_background.jpeg');
+  AssetGenImage get locationPermissionBackground => const AssetGenImage(
+      'assets/prepare_asset/image/location_permission_background.jpeg');
 
   /// File path: assets/prepare_asset/image/no_connection.png
-  AssetGenImage get noConnection => const AssetGenImage('assets/prepare_asset/image/no_connection.png');
+  AssetGenImage get noConnection =>
+      const AssetGenImage('assets/prepare_asset/image/no_connection.png');
 
   /// File path: assets/prepare_asset/image/share.png
-  AssetGenImage get share => const AssetGenImage('assets/prepare_asset/image/share.png');
+  AssetGenImage get share =>
+      const AssetGenImage('assets/prepare_asset/image/share.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [flower, iu, locationPermissionBackground, noConnection, share];
+  List<AssetGenImage> get values =>
+      [flower, iu, locationPermissionBackground, noConnection, share];
 }
 
 class $AssetsPrepareAssetLottieGen {
@@ -117,7 +139,8 @@ class $AssetsPrepareAssetSvgIconGen {
   String get copy => 'assets/prepare_asset/svg.icon/Copy.svg';
 
   /// File path: assets/prepare_asset/svg.icon/Profile Delete 2.svg
-  String get profileDelete2 => 'assets/prepare_asset/svg.icon/Profile Delete 2.svg';
+  String get profileDelete2 =>
+      'assets/prepare_asset/svg.icon/Profile Delete 2.svg';
 
   /// File path: assets/prepare_asset/svg.icon/add.svg
   String get add => 'assets/prepare_asset/svg.icon/add.svg';
@@ -368,7 +391,8 @@ class $AssetsPrepareAssetSvgIconGen {
   /// File path: assets/prepare_asset/svg.icon/home_fill.svg
   String get homeFill => 'assets/prepare_asset/svg.icon/home_fill.svg';
 
-  $AssetsPrepareAssetSvgIconInstagramGen get instagram => const $AssetsPrepareAssetSvgIconInstagramGen();
+  $AssetsPrepareAssetSvgIconInstagramGen get instagram =>
+      const $AssetsPrepareAssetSvgIconInstagramGen();
 
   /// File path: assets/prepare_asset/svg.icon/kakao.svg
   String get kakao => 'assets/prepare_asset/svg.icon/kakao.svg';
@@ -419,7 +443,8 @@ class $AssetsPrepareAssetSvgIconGen {
   String get nextButton => 'assets/prepare_asset/svg.icon/next_button.svg';
 
   /// File path: assets/prepare_asset/svg.icon/next_button_dark.svg
-  String get nextButtonDark => 'assets/prepare_asset/svg.icon/next_button_dark.svg';
+  String get nextButtonDark =>
+      'assets/prepare_asset/svg.icon/next_button_dark.svg';
 
   /// File path: assets/prepare_asset/svg.icon/overlap.svg
   String get overlap => 'assets/prepare_asset/svg.icon/overlap.svg';
@@ -693,7 +718,8 @@ class $AssetsPrepareAssetSvgIconInstagramGen {
   String get igtv => 'assets/prepare_asset/svg.icon/instagram/igtv.svg';
 
   /// File path: assets/prepare_asset/svg.icon/instagram/instagram.svg
-  String get instagram => 'assets/prepare_asset/svg.icon/instagram/instagram.svg';
+  String get instagram =>
+      'assets/prepare_asset/svg.icon/instagram/instagram.svg';
 
   /// File path: assets/prepare_asset/svg.icon/instagram/like.svg
   String get like => 'assets/prepare_asset/svg.icon/instagram/like.svg';
@@ -717,13 +743,38 @@ class $AssetsPrepareAssetSvgIconInstagramGen {
   String get user => 'assets/prepare_asset/svg.icon/instagram/user.svg';
 
   /// List of all assets
-  List<String> get values => [add, bookmark, camera, chat, close, compass, download, eye, follow, follower, gallery, gear, history, home, igtv, instagram, like, search, send, timeline, trash, upload, user];
+  List<String> get values => [
+        add,
+        bookmark,
+        camera,
+        chat,
+        close,
+        compass,
+        download,
+        eye,
+        follow,
+        follower,
+        gallery,
+        gear,
+        history,
+        home,
+        igtv,
+        instagram,
+        like,
+        search,
+        send,
+        timeline,
+        trash,
+        upload,
+        user
+      ];
 }
 
 class Assets {
   Assets._();
 
-  static const $AssetsLauncherIconsGen launcherIcons = $AssetsLauncherIconsGen();
+  static const $AssetsLauncherIconsGen launcherIcons =
+      $AssetsLauncherIconsGen();
   static const String localization = 'assets/localization.csv';
   static const $AssetsPrepareAssetGen prepareAsset = $AssetsPrepareAssetGen();
   static const $AssetsSplashGen splash = $AssetsSplashGen();

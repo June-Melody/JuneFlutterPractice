@@ -5,11 +5,6 @@ following document for the [writing guide]().
 
 Please insert the image URL here.
 
-# dependency Extension
-
-If there are any extension that need to be installed beforehand to run this view, please provide
-the links to those Extensions.
-
 # contributors
 
 Please insert the contributor's github id here.
